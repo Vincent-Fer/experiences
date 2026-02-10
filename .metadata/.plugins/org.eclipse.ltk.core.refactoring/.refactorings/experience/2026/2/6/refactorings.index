@@ -1,0 +1,21 @@
+1770298724349	Encapsulate field 'id, ...'
+1770298751881	Encapsulate field 'nom, ...'
+1770298755361	Encapsulate field 'email, ...'
+1770298758866	Encapsulate field 'lastConnection, ...'
+1770299752511	Rename package 'experience'
+1770299898595	Encapsulate field 'type, ...'
+1770299902422	Encapsulate field 'value, ...'
+1770299905778	Encapsulate field 'time, ...'
+1770300076184	Rename package 'entities'
+1770300236138	Rename package 'classes'
+1770300246981	Rename type 'Mesure'
+1770300429347	Delete element
+1770300625170	Delete element
+1770300644458	Delete element
+1770300685270	Delete element
+1770300688238	Delete element
+1770300853306	Delete element
+1770301096278	Encapsulate field 'nom, ...'
+1770301150253	Encapsulate field 'listQuestions, ...'
+1770301153115	Encapsulate field 'listReponses, ...'
+1770301404928	Rename compilation unit 'MesureUtils.java'

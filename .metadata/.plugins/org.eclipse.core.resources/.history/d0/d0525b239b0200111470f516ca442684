@@ -1,0 +1,10 @@
+package entities;
+
+public class Stimuli {
+	
+	
+	
+	public Stimuli() {
+		
+	}
+}

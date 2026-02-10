@@ -1,0 +1,52 @@
+package experience;
+
+import java.util.Date;
+import java.lang.Class;
+
+public class User {
+	
+	private Integer id;
+	private String nom;
+	private String email;
+	private long lastConnectionMs;
+	
+	public User(Integer id, String nom, String email, Integer lastConnection) {
+		this.id = id;
+		this.nom = nom;
+		this.email = email;
+		this.lastConnectionMs = System.currentTimeMillis();
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Long getLastConnectionMs() {
+		return lastConnectionMs;
+	}
+
+	public void setLastConnectionMs(Long lastConnection) {
+		this.lastConnectionMs = lastConnection;
+	}
+
+}
