@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Choices{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/choice.css') }}">{% endblock %}
+
+{% block content %}
+    <h1>Page des choix</h1>
+    <div id="divSesExp">
+        <div class="divIn" id="divSes">
+            <p>Commencer une nouvelle sesion</p>
+            <form id="myForm" method="POST" action="/newSes">
+                <!-- tes champs ici -->
+                <button type="submit" id="newSes">C'est parti !</button>
+            </form>
+            {% if messageSes %}
+                <span style="color: red; margin-top: 10px;">
+                    {{ messageSes }}
+                </span>
+            {% endif %}
+            {% if messageTps %}
+                <span style="color: red; margin-top: 10px;">
+                    Revenez dans : {{ messageTps }}
+                </span>
+            {% endif %}
+        </div>
+        <div class="divIn" id="divExp">
+            <p>Voir les explications</p>
+            <form id="myForm2" method="POST" action="/explainations">
+                <!-- tes champs ici -->
+                <button type="submit" id="taskExplainations">Explications</button>
+            </form>
+        </div>
+    </div>
+    <p>Vérifier votre historique de feedback</p>
+    <div id="div_feedback">
+    </div>
+    <button id="tutorialToggle" class="tutorial-btn">Démarrer le tutoriel</button>
+    <div id="tutorialTooltip" style="display: none;">
+        <div id="tutorialContent"></div>
+        <div id="tutorialControls">
+            <button class="tutorial-control-btn" id="prevStep">←</button>
+            <span id="stepCounter" class="step-counter"></span>
+            <button class="tutorial-control-btn" id="nextStep">→</button>
+            <button class="tutorial-control-btn" id="closeTutorial">✕</button>
+        </div>
+    </div>
+    <script>
+        // Ici, Jinja va remplacer {{ ses }} par sa valeur réelle
+        const ses = {{ ses|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='script/choice.js') }}" defer></script>
+{% endblock %}

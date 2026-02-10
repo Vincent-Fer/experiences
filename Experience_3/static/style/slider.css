@@ -1,0 +1,117 @@
+/* Styles généraux pour la page */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7; /* Fond clair pour contraster avec le bleu */
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+main {
+    background-color: #ffffff; /* Fond blanc pour la section principale */
+    border: 1px solid #004080; /* Bordure bleue */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+    max-height: 90vh; /* Limite la hauteur à 90% de la fenêtre */
+}
+
+/* Style pour le titre */
+h2 {
+    color: #004080; /* Texte bleu foncé */
+    margin-bottom: 2%;
+}
+
+/* Style pour les boutons de notation */
+.rating-button {
+    background-color: #004080; /* Fond bleu foncé */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 1.5vh 1.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Permet aux boutons de s'étendre pour remplir l'espace disponible */
+    width: fit-content;
+}
+
+.rating-button::selection{
+    background-color: #004080;
+}
+
+.rating-button:hover {
+    background-color: #002868; /* Bleu plus foncé au survol */
+}
+
+/* Style pour la valeur sélectionnée */
+#selected-rating {
+    margin: 2% 0;
+    font-size: 1.1rem;
+    color: #004080; /* Texte bleu foncé */
+}
+
+/* Style pour le bouton d'envoi */
+.submit-btn {
+    background-color: #004080; /* Fond bleu foncé */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #002868; /* Bleu plus foncé au survol */
+}
+
+.rating-button.selected{
+    background-color: #096bcc;
+}
+
+.rating-row {
+    width: 80%;
+    margin: 0 auto; /* centre horizontalement */
+}
+
+.rating-scale, .rating-labels {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5em; /* même écart que pour les boutons */
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+
+.rating-labels {
+    margin-top: 4px;
+}
+
+.rating-labels span {
+    font-size: 0.95em;
+    text-align: center;
+    width: 100%;
+    /* Pour éviter que le texte ne déborde trop */
+    white-space: nowrap;
+}
+
+.left-label {
+    justify-self: start;
+    text-align: left;
+}
+
+.right-label {
+    justify-self: end;
+    text-align: right;
+}

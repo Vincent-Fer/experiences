@@ -1,0 +1,31 @@
+id;name;type;vLastAIS;vDistAIS;headAIS;headReal;speedAIS;speedReal;to;from;nat;mmsi;imo;status;lengthAIS;lengthReal;width;built;weight;temperature;wind;waveHeight;draught;inMaritimeRoad;inFishingZone;inCoastZone;nearOtherVessel;protectedZone;recIA;gt;expIA;expGT
+0;REGAIN;Pleasure Craft;<1;<1;345,1;344,8;4,8;4,6;;Vigo, Spain;FR;227460040;;;9;10;4;;;;;;;1;0;0;0;0;neutre;neutre;les données AIS et captées sont cohérentes et le navire de plaisance traverse la route maritime à presque 90°;
+1;RTM DRAKE;Bulk Carrier;<1;<1;267,8;271,1;10,4;11,2;Sept-Iles, Canada;Rotterdam, Netherlands;SG;564830000;9591351;Under Way;300;269;50;2013;106,8;;;;19,4;1;0;0;0;0;suspect;neutre;l'écart entre la longueur captée et la longueur déclarée est important, mais il possède également un tirant d'eau élevée pour le type, la longueur et le poids déclaré;
+2;GW FORTUNE;Crude Oil Tanker;<1;<1;83,2;82,1;12,2;13,1;Jebel Ali Anch., United Arab Emirates;Corpus Christi, United States;BS;311001541;1015258;Under Way;330;325;60;2024;157;;;;11;1;0;0;0;0;suspect;suspect;ce n'est pas le rail maritime pour rejoindre Jebel Ali Anch., United Arab Emirates depuis Corpus Christi, United States;
+3;ENEZ EUSSA 3;Passenger Ship;<1;<1;52,1;51,3;0,8;0,9;Brest, France;Brest, France;FR;227003050;;Under Way;45;43;9;;;;;;2,8;0;0;1;0;1;neutre;neutre;;
+4;LE BOUCANIER;Fishing;<1;<1;331,2;331;8,5;8,3;;Roscoff, France;FR;227132100;;;12;10;4;;;;;;;0;0;0;0;0;neutre;neutre;;
+5;GERMAN WARSHIP F220;Military Ops;<1;<1;179,1;181,3;17,4;18,1;;Plymouth Anch., United Kingdom;DE;211905000;;Under Way;143;146;17;;;;;;6,6;0;1;0;0;0;neutre;neutre;;
+6;PONT AVEN;Passenger Ship;<1;<1;252,7;254,8;21,3;22,1;Santander, Spain;Plymouth, United Kingdom;FR;228183600;9268708;Under Way;184;188;34;2004;40,9;;;;6,8;0;1;0;0;0;neutre;neutre;;
+7;LYRA;General Cargo;<1;<1;57,4;58;9,2;10,1;Dunkerque, France;Aviles, Spain;PT;255805938;9155432;Under Way;100;98;16;1998;4,1;;;;6,8;1;0;0;0;0;suspect;neutre;le traitement d'image semble indiquer que le navire est un Tanker et non un General Cargo;
+8;WILSON PALMA;General Cargo;<1;<1;115,6;113,1;6,8;6,4;Wilhelmshaven, Germany;Waterford, Ireland;NO;257237000;9368417;Under Way;90;85;14;2009;2,9;;;;5,8;0;0;0;0;0;neutre;neutre;;
+9;JESSICA SADIE;Fishing;<1;<1;255,1;250,4;8,7;8,1;;Hugh Town, United Kingdom;UK;235087196;;Under Way;10;10;4;;;;;;;0;0;0;0;0;neutre;neutre;;
+10;MORGAZH;Law enforcement;<1;<1;217,1;218,3;14,1;13,5;;;FR;228156120;;;9;10;4;;;;;;;0;0;0;0;0;neutre;neutre;;
+11;F/V MELIZENN;Fishing;<1;<1;237,1;241;2,4;2,1;;Roscoff, France;FR;228070700;9840922;Fishing;25;27;6;2015;0,2;;;;4,7;0;1;0;0;0;neutre;neutre;;
+12;TWISTER;Sailing;<1;<1;248,3;245,3;6,4;6,6;Dun Laoghaire, Ireland;Cherbourg, France;NL;244007000;;Sailing;36;35;6;;;;;;2,8;1;0;0;0;0;neutre;neutre;;
+13;STI PIMLICO;Chemical/Oil Products Tanker;<1;<1;357,8;356,4;13,9;13,1;Pembroke, United Kingdom;Amsterdam, Netherlands;MH;538005398;9686871;Under Way;184;182;27;2014;24,2;;;;11,2;0;0;1;0;0;neutre;suspect;le navire se rapproche des côtes avec une vitesse élevée pour se rendre à Pembroke, United Kingdom;
+14;HAFNIA TRITON;Crude Oil Tanker;<1;<1;203,6;206,8;14,1;13,8;Bilbao, Spain;Rotterdam Vondeling, Netherlands;SG;563069300;9800336 ;Under Way;250;247;44;2019;62,5;;;;13,3;1;0;0;1;0;suspect;suspect;le navire semble trop proche d'un autre navire dans un rail maritime avec une vitese de 13,8kn;
+15;GREEN K-MAX 6;Bulk Carrier;<1;<1;204,1;205,1;14;14,5;Pointe Noire, Congo;Szczecin, Poland;HK;477195900;9659892;Under Way;229;225;32;2020;44;;;;13;1;0;0;1;0;suspect;suspect;l'image indique que c'est un sous-marin russe et non pas un navire de type Bulk Carrier;
+16;NAVIG8 HONOR;Crude Oil Tanker;<1;<1;231,8;231,5;15,5;15,6;Bilbao, Spain;Antwerpen Anch., Belgium;MH;538003756;9556181;Under Way;228;224;32;2011;42,2;;;;7,7;1;0;0;0;0;neutre;neutre;;
+17;PALADIN;Sailing;<1;<1;238,5;238,9;4,2;4,1;;Brouwershaven, Netherlands;KY;319741310;9470624 ;Under Way;48;45;9;2008;0,5;;;;2,4;0;0;1;1;0;neutre;neutre;;
+18;JEWEL;Crude Oil Tanker;<1;<1;239,5;238,1;10,2;10,7;Port Said, Egypt;Primorsk Anch., Russia;PA;374987000;9419450;Under Way;249;255;44;2010;61,3;;;;14;1;0;0;0;0;neutre;suspect;les données AIS et captées sont cohérentes entre elles et avec les images;Le nom de l'image ne correspond pas
+19;BOAVISTA;Sailing;<1;<1;260,1;257,3;7,6;7,8;;Roscoff, France;FR;227207310;;;14;16;4;;;;;;;0;0;1;0;0;neutre;neutre;;
+20;CHRISTELLE MICKAEL;Fishing;<1;<1;332,2;331,9;2,1;2,1;;Brest, France;FR;227628730;;Under Way;10;10;4;;;;;;;0;0;1;0;0;neutre;neutre;;
+21;GALICIA;Passenger/Ro-Ro Cargo;<1;<1;223,1;224,3;6,8;6,6;Bilbao, Spain;Portsmouth, United Kingdom;FR;228392900;9856189;Under Way;215;217;30;2020;41,6;;;;6;0;0;0;0;0;neutre;neutre;;
+22;NANUK BR;Sailing;<1;<1;154,1;155,3;5,9;5,7;Aber-Wrac'h;Saint-Malo, France;FR;227488740;;Under Way;11;10;4;;;;;;;0;0;1;1;0;neutre;neutre;les données AIS et captées sont cohérentes avec les images, et le navire de plaisance semble se diriger vers Aber-Wrac'h;
+23;SNS 201;SAR;<1;<1;253,3;254,5;5,1;5;;;FR;227052930;;Under Way;12;10;4;;;;;;1,3;0;0;1;0;0;neutre;neutre;;
+24;MARC'H MOR;Fishing;<1;<1;161,1;162,3;0;0,1;;Lorient, France;FR;227733270;;Fishing;12;10;4;;;;;;;0;0;1;1;1;suspect;neutre;le navire se dit en train de pécher alors qu'il est dans une zone protégée;probablement un oubli
+25;FREMM BRETAGNE;Military Ops;<1;<1;74,1;75,6;15,1;16,3;;Brest, France;FR;227999700;;Under Way;142;148;20;;;;;;7,3;1;0;0;0;1;neutre;neutre;;
+26;Z19 BRIGITTE;Fishing;<1;<1;21,2;23,8;4,6;4,8;;Roscoff, France;BE;205096000;9898668;Fishing;34;35;8;2021;0,3;;;;15,1;0;0;0;1;0;suspect;neutre;le tirant d'eau est élevé pour un navire de pèche;il y a eu probablement une erreur dans l'AIS ou alors le tirant d'eau est lié au filet de pèche
+27;ROSE HERE;Passenger;<1;<1;162,9;164,6;5,3;5,5;Brest, France;;FR;227008380;;Under Way;26;26;7;;;;;;;0;0;1;0;1;neutre;neutre;;
+28;;Unknown;;;;73,7;;12,1;;;;;;;;128;;;;;;;;1;0;1;0;1;neutre;neutre;ce navire semble être un sous marin Français se dirigeant vers Brest, France;
+29;TACOMA;Sailing;<1;<1;268;267,7;5,7;5,9;;Brest, France;FR;227733310;;;9;10;3;;;;;;;0;0;1;0;1;neutre;neutre;;

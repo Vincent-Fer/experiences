@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Explications{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/explainations.css') }}">{% endblock %}
+
+{% block content %}
+    <div class="case">
+        <h1>Explications</h1>
+        <hr/>
+        <h2>Sur la tâche à réaliser</h2>
+        <div>
+            <p>Vous êtes dans un avion de surveillance maritime et votre action consiste à identifier des navires <span style="color: red"> suspect </span> à l'aide des moyens à bord de l'avion.</p>
+            <p>
+                Vous allez réaliser 7 missions à raison de 2 missions maximum par semaine.<br/>
+                Durant chacune de ces missions, votre tâche sera de classifier 30 navires, séparés en 3 ensembles de 10 navires, en vous appuyant sur diverses informations pour déterminer si chaque navire est <span style="color: red">Suspect</span> ou <span style="color: green">Neutre</span>. <br/>
+                Vous recevrez une recommandation d'une IA après chacune de vos décisions initiales.
+            </p>
+            <p style="text-align: center; font-weight: bold; border: 1px solid black; padding: 1vh 1vw">
+                L'IA vous accompagnant utilise les mêmes données que celles à votre disposition.
+            </p>
+            <p>
+                Pour chaque navire :
+                <ul>
+                    <li>vous aurez 30 secondes pour prendre une décision initiale : <span style="color: red">Suspect</span> ou <span style="color: green">Neutre</span>. Si vous ne répondez pas à temps, la décision <span style="color: red">Suspect</span> sera prise par défaut.</li>
+                    <li>puis une recommandation de l'IA apparaitra pendant 5 secondes indiquant <span style="color: red">Suspect</span> ou <span style="color: green">Neutre</span>;</li>
+                    <li>puis vous aurez 10 secondes pour prendre une décision finale <span style="color: red">Suspect</span> ou <span style="color: green">Neutre</span>. Si vous ne répondez pas à temps, la décision initiale sera prise par défaut.</li>
+                </ul>
+                Les informations que vous devrez analyser sont agencées comme suit :
+            </p>
+            {{ code | safe }}
+            <p id="nextCase">
+                Votre mission sera d'aggréger toutes les informations et de voir si le navire à traiter possède des informations non cohérentes menant à la classification <span style="color: red">Suspect</span>.
+                <p>
+                    Toutes vos décisions finales sont enregistrées permettant d'établir un classement entre chaque participant. Ce classement sera accessible dans un feedback qui sera à consulter <span style="font-weight: bold; font-style: italic;">obligatoirement entre chaque session</span>.
+                </p>
+                <p style="font-weight: bold; border: 1px solid black; padding: 1vh 1vw; text-align: center;">Vous ne pourrez pas commencer de nouvelle session sans avoir consulté préalablement ce feedback.</p>
+                <p>
+                    Les points sont comptabilisés comme suit :
+                    <ul>
+                        <li>une bonne décision finale vous fera <span style="font-weight: bold; font-style: italic; color: green">gagner 5 points</span>.</li>
+                        <li>une mauvaise décision finale vous fera <span style="font-weight: bold; font-style: italic; color: red;">perdre 11 points</span>.</li>
+                        <li>un temps dépassé dans la décision initiale ou finale vous fera <span style="font-weight: bold; font-style: italic; color: red;">perdre 10 points</span>. Ces <span style="font-weight: bold; font-style: italic; color: red;">10 points perdus</span> se cumuleront avec <span style="font-weight: bold; font-style: italic; color: red;">l'erreur</span> ou <span style="font-weight: bold; font-style: italic; color: green;">la bonne réponse</span> associée à la décision finale.</li>
+                    </ul>
+                </p>
+                <p style="font-weight: bold; border: 1px solid black; padding: 1vh 1vw; text-align: center;">
+                    Faites donc bien attention à répondre dans les temps.
+                </p>
+            </p>
+        </div>
+        <hr/>
+        <h2>Sur le feedback inter session</h2>
+        <div>
+            <p>
+                Ce feedback devra être obligatoirement lu au moins 1 jour avant la session suivante.
+            </p>
+            <p>
+                Il sera constitué de 6 cas rencontrés pendant la mission précédente plus les différents éléments suivant pour chaque cas:<br/>
+                <img id="interface" src="data:image/png;base64,{{ elementsFeedback }}"/><br/>
+                <ul>
+                    <li>1 - Votre décision initiale.</li>
+                    <li>2 - La recommandation de l'IA plus son explication.</li>
+                    <li>3 - Votre décision finale.</li>
+                    <li>4 - La vérité terrain determinée par des experts.</li>
+                </ul>
+                Vous pourrez donc vous baser sur ces éléments pour comprendre comment l'IA fonctionne et mieux appréhender son fonctionnement pour la suite de l'expérience.<br/>
+                En fin de feedback, vous retrouverez votre classement par rapport au premier de la session et au participant juste devant vous.<br/>
+                <img id="interface" src="data:image/png;base64,{{ rankingFeedback }}"/><br/>
+            </p>
+            <form id="myForm" method="POST" action="/choice">
+                <!-- tes champs ici -->
+                <button class="previous" type="submit" id="previousPage" style="display : none">Revenir à la page choix</button>
+                <button class="previous" type="submit" id="previousPage2" style="display : none">Suivant</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        if ({{choice}} == 1){
+            document.getElementById('previousPage2').style.display = "block"
+        }else{
+            document.getElementById('previousPage').style.display = "block"
+        }
+        let ses = {{ses}}
+    </script>
+    <script src="{{ url_for('static', filename='script/explainations.js') }}" defer></script>
+{% endblock %}

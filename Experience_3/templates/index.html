@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">{% endblock %}
+
+{% block content %}
+    <h1>Index</h1>
+    <p>Vous voici sur la page de l'expérimentation concernant la confiance dans une IA d'aide à la décision au fil du temps.</p>
+    <p>Cette expérimentation se déroule sur 8 sessions à raison de 1 session par semaine. Vous allez recevoir un feedback sur votre mission le lendemain de chacune de ces sessions, merci d'en prendre connaissance avant la session suivante. Des questions vous seront posées, au moins la première fois, pour nous assurer de votre compréhension, n'hésitez pas à nous contacter pour la moindre question le concernant.</p>
+    <p>Un système de récompense est mis en place durant cette expérience, notamment pour les 4 premiers. Le 1er gagnera une carte cadeau de 100€, le 2nd de 50€, les 3 et 4èmes de 25€. Un dernier de 25€ sera tiré aléatoirement parmi les participants restant. Au delà de cette récompense, votre contribution est majeur puisqu'elle permet à la communauté scientifique de mieux comprendre les mécanismes psychologiques influençant la confiance au fil du temps. Merci encore pour votre contribution.</p>
+    <p>Je vous invite à lire la procédure suivante avant de passer à la suite.</p>
+    <table>
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <form action="login">
+        <label for="validateInitForm">Je certifie avoir pris connaissance des conditions actuelles.</label><br/>
+        <input type="checkbox" id="validateInitForm" value="validate"/><br/>
+        <input type="submit" id="initForm" value="Accepter" onclick="post"/>
+    </form>
+{% endblock %}

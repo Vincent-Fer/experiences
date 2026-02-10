@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Game{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/listSuspect.css') }}">{% endblock %}
+
+{% block content %}
+<div id="case">
+    <table id="tab_data">
+        <tr id="tr_th">
+            <th class="th_vesData" id="th_sus">
+                Liste Suspect
+                <hr/>
+            </th>
+        </tr>
+        <tr id="tr_vesData"></tr>
+            <td class="vesData" id="tdSus">
+                <p>{{sus[0]}}</p>
+                <p>{{sus[1]}}</p>
+                <p>{{sus[2]}}</p>
+                <p>{{sus[3]}}</p>
+                <p>{{sus[4]}}</p>
+                <p>{{sus[5]}}</p>
+                <p>{{sus[6]}}</p>
+                <p>{{sus[7]}}</p>
+                <p>{{sus[8]}}</p>
+                <p>{{sus[9]}}</p>
+                <p>{{sus[10]}}</p>
+                <p>{{sus[11]}}</p>
+                <p>{{sus[12]}}</p>
+                <p>{{sus[13]}}</p>
+                <p>{{sus[14]}}</p>
+                <hr/>
+            </td>
+        </tr>
+    </table>
+    <form action="/sendListSuspect" method="POST">
+        <button type="submit" class="submit-btn" id="submitMiss">Passer à la mission</button>
+    </form>
+</div>
+{% endblock %}

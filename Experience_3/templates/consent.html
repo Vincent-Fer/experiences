@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Consentement{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/consent.css') }}">{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <form id="consentForm" action="/sendConsent" method="POST">
+        <div id="formulairePDF">
+            <h1>FORMULAIRE DE CONSENTEMENT (adultes)</h1>
+            <h2>Titre du projet : Expérience de classification de cible dans le cadre de la thèse de Vincent Fer</h2>
+            <p style="text-align: right;">Paraphez chaque case</p>
+            <table>
+                <tr>
+                <td class="question">
+                    1. Avez-vous lu la fiche d'information pour les participants ?
+                </td>
+                <td>
+                    <div class="radio-group">
+                    <label>
+                        <input type="radio" name="q1" value="oui" required>Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="non">Non
+                    </label>
+                    <input type="text" class="initiales-input" name="init1" maxlength="5" placeholder="Initiales" required>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td class="question">
+                    2. Avez-vous reçu suffisamment d'informations sur l'étude et ce qu'implique votre participation ?
+                </td>
+                <td>
+                    <div class="radio-group">
+                    <label>
+                        <input type="radio" name="q2" value="oui" required>Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="non">Non
+                    </label>
+                    <input type="text" class="initiales-input" name="init2" maxlength="5" placeholder="Initiales" required>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td class="question">
+                    3. Comprenez-vous que vous n'avez pas besoin de participer à l'étude et que si vous le faites, vous êtes libre de vous retirer :
+                    <ul style="margin:6px 0 0 18px; padding-left:0; font-weight:400;">
+                    <li>à tout moment pendant l'étude ;</li>
+                    <li>sans avoir à vous justifier ;</li>
+                    <li>et sans préjudice pour vous ?</li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="radio-group">
+                    <label>
+                        <input type="radio" name="q3" value="oui" required>Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="non">Non
+                    </label>
+                    <input type="text" class="initiales-input" name="init3" maxlength="5" placeholder="Initiales" required>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td class="question">
+                    4. Êtes-vous d'accord pour participer à cette étude ?
+                </td>
+                <td>
+                    <div class="radio-group">
+                    <label>
+                        <input type="radio" name="q4" value="oui" required>Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="non">Non
+                    </label>
+                    <input type="text" class="initiales-input" name="init4" maxlength="5" placeholder="Initiales" required>
+                    </div>
+                </td>
+                </tr>
+            </table>
+
+            <div class="form-row">
+                <label for="nom">Prénom / Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="age">Âge :</label>
+                <input type="number" id="age" name="age" min="0" max="120" style="width:80px;" required>
+            </div>
+
+            <div class="signature-row">
+                <label for="signatureCanvas">Signature :</label>
+                <canvas id="signatureCanvas" class="signature-box"></canvas>
+                <button type="button" class="clear-btn" onclick="clearSignature()">Effacer</button>
+            </div>
+
+            <div class="form-row">
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-row">
+                <label for="chercheur">Nom du chercheur :</label>
+                <input type="text" id="chercheur" name="chercheur" value="Vincent FER" required>
+                <label for="dateChercheur">Date :</label>
+                <input type="date" id="dateChercheur" name="dateChercheur" required>
+            </div>
+
+            <div class="signature-row">
+                <label for="signatureChercheur">Signature chercheur :</label>
+                <img id="imgSignature" src="data:image/png;base64,{{ signature }}"/>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn" disabled>Envoyer</button>
+
+            <p class="note">
+                Ce projet a été approuvé par le Comité Institutionnel Consultatif pour la Protection des Personnes dans la Recherche d'IMT Atlantique.
+            </p>
+        </div>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='script/consent.js') }}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+{% endblock %}

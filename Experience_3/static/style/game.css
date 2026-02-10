@@ -1,0 +1,878 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    zoom:1;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    touch-action: none;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+#case {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+table {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+#tab_data{
+    position: absolute;
+    width: 40%;
+}
+
+#tab_tac{
+    position: absolute;
+    width: 60%;
+    margin-left: 40%;
+}
+
+#tr_th{
+    position: absolute;
+    width: 100%;
+    padding: 1%;
+    height: 5vh;
+    background-color: #004080;
+    color: white;
+    border-left: 1px solid #004080;
+    box-sizing: border-box;
+}
+
+.th_vesData{
+    width: 13.33vw;
+    padding-top: 1vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#th_sus{
+    position: absolute;
+    margin-left: 0;
+}
+
+#th_ais{
+    position: absolute;
+    margin-left: 13.33vw;
+}
+
+#th_sens{
+    position: absolute;
+    margin-left: 26.66vw;
+}
+
+#tr_vesData{
+    position: absolute;
+    margin-top: 5vh;
+    box-sizing: border-box;
+}
+
+.vesData {
+    width: 33.33vw;
+    height: 55vh;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: #f0f4f7;
+    vertical-align: top;
+    border-left: 0.1vh solid #004080;
+}
+
+#tdSus{
+    border-left: 0px;
+}
+
+#th_sus{
+    border-left: 0px;
+}
+
+td.vesData p {
+    display: block;
+    width: 100%;
+    margin: 0;        /* Optionnel : retire les marges par défaut */
+    padding: 1%;
+    box-sizing: border-box; /* Pour inclure padding/border dans la largeur */
+}
+
+#tr_ves{
+    position: absolute;
+    margin-top: 60vh;
+}
+
+#td_ves {
+    position: absolute;
+    padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+}
+
+#imgVes {
+    position: absolute;
+    margin-top: 0;
+    height: 40vh;
+    width: 40vw;
+}
+
+#imgVes:hover{
+    cursor:none;
+}
+
+.loupe {
+    display: none;
+    position: absolute;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
+#tr_tac{
+    position: absolute;
+}
+
+#td_img_tac {
+    position: absolute;
+    padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+}
+
+#imgTac {
+    position: absolute;
+    margin-left: 0;
+    height: 100vh;
+    width: 60vw;
+}
+
+#tr_dec{
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 60vw;
+    height: 5vh;
+    z-index: 10;
+    margin-top: 88vh;
+}
+
+.td_dec{
+    position: relative;
+    display: block;
+    width: 40vw;
+    padding: 1vh;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+#tdRec{
+    display: none;
+}
+
+#tdDecFin{
+    display: none;
+}
+
+.td_span{
+    display: block;
+    font-weight: bold;
+}
+
+.btn_group {
+    display: block;
+    text-align: center;
+}
+
+.but_sus, .but_neu {
+    display: inline-block;
+    padding: 1vh 1vw;
+    border: 0;
+    border-radius: 1vw;
+    font-weight: bold;
+}
+
+.but_sus {
+    background-color: rgb(255, 87, 87);
+}
+.but_sus:hover {
+    background-color: rgb(255, 3, 3);
+    cursor: pointer;
+}
+
+.but_neu {
+    background-color: rgb(0, 192, 0);
+}
+
+.but_neu:hover{
+    background-color:green;
+    cursor: pointer;
+}
+
+#recSus{
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vw;
+    border: 0vw solid black;
+    border-radius: 1vw;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 87, 87);
+}
+
+#recSus:hover{
+    cursor: default;
+}
+
+#recNeu{
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vw;
+    border: 0vw solid black;
+    border-radius: 1vw;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: rgb(0, 192, 0);
+}
+
+#recNeu:hover{
+    cursor: default;
+}
+
+#tr_cd{
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 60vw;
+    height: 5vh;
+    z-index: 10;
+    margin-top: 95vh;
+}
+
+#td_countdown{
+    position: relative;
+    display: block;
+    padding: 1vh;
+    margin: auto;
+    color: white;
+}
+
+#countdownElement{
+    display: block;
+    text-align: center;/* Centre les boutons horizontalement */
+    width: fit-content;
+    max-width: 20vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    border: 0px solid black;
+    border-radius: 1vw;
+    font-weight: bold;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.normal{
+    background-color: green;
+}
+
+.danger{
+    background-color: red;
+}
+
+.warning{
+    background-color: orange;
+}
+
+@media screen and (max-width: 1000px) {
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    #case {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    table {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        table-layout: fixed;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+    /* Vos styles pour les écrans de 1000px ou moins */
+    #tab_data{
+        position: absolute;
+        width: 100%;
+    }
+
+    #tab_tac{
+        position: absolute;
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    #tr_th{
+        position: absolute;
+        width: 100%;
+        height: 5vh;
+        background-color: #004080;
+        color: white;
+        border-left: 1px solid #004080;
+        box-sizing: border-box;
+    }
+
+    .th_vesData{
+        width: 33.33vw;
+        padding: 1vh;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #th_sus{
+        position: absolute;
+        margin-left: 0;
+    }
+
+    #th_ais{
+        position: absolute;
+        margin-left: 33.33vw;
+    }
+
+    #th_sens{
+        position: absolute;
+        margin-left: 66.66vw;
+    }
+
+    #tr_vesData{
+        position: absolute;
+        margin-top: 5vh;
+        box-sizing: border-box;
+    }
+
+    .vesData {
+        width: 33.33vw;
+        height: 55vh;
+        padding: 1%;
+        box-sizing: border-box;
+        background-color: #f0f4f7;
+        vertical-align: top;
+        border-left: 0.1vh solid #004080;
+    }
+
+    td.vesData p {
+        display: block;
+        width: 100%;
+        margin: 0;        /* Optionnel : retire les marges par défaut */
+        padding: 0.15vw;
+        box-sizing: border-box; /* Pour inclure padding/border dans la largeur */
+    }
+
+    #imgTac {
+        position: absolute;
+        margin-left: 0;
+        height: 100vh;
+        width: 50vw;
+        z-index: 1;
+    }
+
+    #tr_ves{
+        position: absolute;
+        margin-top: 50vh;
+    }
+
+    #td_ves {
+        position: absolute;
+        padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+    }
+
+    #imgVes {
+        position: absolute;
+        margin-top: 0;
+        height: 50vh;
+        width: 50vw;
+    }
+
+    #imgVes:hover{
+        cursor:none;
+    }
+
+    .loupe {
+        display: none;
+        position: absolute;
+        border: 2px solid #333;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        pointer-events: none;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 10;
+    }
+
+    #tr_tac{
+        position: absolute;
+        margin-top: 50vh;
+    }
+
+    #td_img_tac {
+        position: absolute;
+        padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+    }
+
+    #imgTac {
+        position: absolute;
+        margin-left: 0;
+        height: 50vh;
+        width: 50vw;
+        z-index: 1;
+    }
+
+    #tr_dec{
+        position: absolute;
+        height: 0;
+        width: 50vw;
+        height: 15vh;
+        z-index: 10;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin: 89vh auto 0 auto;
+    }
+
+    .td_dec{
+        position: absolute;
+        display: block;
+        width: 60vw;
+        height: 15vh;
+        padding: 1vh;
+        box-sizing: border-box;
+        text-align: center;
+        color: white;
+        margin: 0;
+    }
+
+    .td_span{
+        margin: 0;
+    }
+
+    .but_sus{
+        display: inline-flex;
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5vw 1vw 0.5vw 1vw;
+        border: 0vw solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: center;
+        background-color: rgb(255, 87, 87);
+    }
+
+    .but_sus:hover{
+        background-color: rgb(255, 3, 3);
+        cursor: pointer;
+    }
+
+    .but_neu{
+        display: inline-flex;
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5vw 1vw 0.5vw 1vw;
+        border: 0vw solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: center;
+        background-color: rgb(0, 192, 0);
+    }
+
+    .but_neu:hover{
+        background-color:green;
+        cursor: pointer;
+    }
+
+    #recSus{
+        display: inline-flex;
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5vw 1vw 0.5vw 1vw;
+        border: 0vw solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        background-color: rgb(255, 87, 87);
+    }
+
+    #recSus:hover{
+        cursor: default;
+    }
+
+    #recNeu{
+        display: inline-flex;
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5vw 1vw 0.5vw 1vw;
+        border: 0vw solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        background-color: rgb(0, 192, 0);
+    }
+
+    #recNeu:hover{
+        cursor: default;
+    }
+
+    #tr_cd{
+        position: absolute;
+        display: block;
+        height: 0;
+        width: 50vw;
+        height: 15vh;
+        z-index: 10;
+        margin-top: 95.5vh;
+    }
+
+    #td_countdown{
+        position: relative;
+        display: block;
+        padding: 1vh;
+        margin: auto;
+        color: white;
+    }
+
+    #countdownElement{
+        display: block;
+        padding: 0vw;
+        width: 0;
+        min-width: 10vw;
+        border: 0px solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    /* Styles CSS à appliquer dans ce cas */
+    /* Vos styles pour les écrans de 1000px ou moins */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100vh;
+        min-width: 100vw;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #case {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    table {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+
+    #tab_data{
+        position: absolute;
+        width: 100%;
+    }
+
+    #tab_tac{
+        position: absolute;
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #tr_th{
+        position: absolute;
+        width: 100%;
+        height: 5vh;
+        background-color: #004080;
+        color: white;
+        border-left: 0px solid #004080;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .th_vesData{
+        width: 32vw;
+        padding: 1vh 0.33vw;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #th_sus{
+        position: absolute;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+
+    #th_ais{
+        position: absolute;
+        margin-left: 33vw;
+        box-sizing: border-box;
+    }
+
+    #th_sens{
+        position: absolute;
+        margin-left: 66vw;
+        box-sizing: border-box;
+    }
+
+    #tr_vesData{
+        position: absolute;
+        margin-top: 5vh;
+        box-sizing: border-box;
+    }
+
+    .vesData {
+        width: 33.33vw;
+        height: 35vh;
+        padding: 1%;
+        box-sizing: border-box;
+        background-color: #f0f4f7;
+        vertical-align: top;
+        border-left: 0.1vh solid #004080;
+    }
+
+    td.vesData p {
+        display: block;
+        width: 100%;
+        margin: 0;        /* Optionnel : retire les marges par défaut */
+        padding: 0.15vw;
+        box-sizing: border-box; /* Pour inclure padding/border dans la largeur */
+    }
+
+    #tr_ves{
+        position: absolute;
+        margin-top: 40vh;
+    }
+
+    #td_ves {
+        position: absolute;
+        padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+    }
+
+    #imgVes {
+        position: absolute;
+        margin-top: 0;
+        margin-left: 0;
+        height: 30vh;
+        width: 100vw;
+    }
+
+    #imgVes:hover{
+        cursor:none;
+    }
+
+    .loupe {
+        display: none;
+        border: 2px solid #333;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        pointer-events: none;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 10;
+    }
+
+    #tr_tac{
+        position: absolute;
+        margin-top: 70vh;
+    }
+
+    #td_img_tac {
+        position: absolute;
+        padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+    }
+
+    #imgTac {
+        position: absolute;
+        height: 30vh;
+        width: 100vw;
+        z-index: 1;
+    }
+
+    #tr_dec{
+        position: absolute;
+        height: 0;
+        width: 100vw;
+        z-index: 10;
+        margin-top: 90vh;
+        margin-left: 0;
+        display: block;
+    }
+
+    .td_dec {
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+        height: 0;
+        position: relative;
+        color: white;
+    }
+
+    .td_span {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto 0 auto; /* espace sous le texte */
+    }
+
+    .btn_group {
+        display: block;
+        text-align: center;
+    }
+
+    .but_sus, .but_neu {
+        display: inline-block;
+        min-width: 100px;
+        padding: 1vw 2vw;
+        margin: 0 8px 0 8px; /* Espace horizontal entre les boutons */
+        border: 0;
+        border-radius: 1vw;
+        font-weight: bold;
+    }
+
+    .but_sus {
+        background-color: rgb(255, 87, 87);
+    }
+    .but_sus:hover {
+        background-color: rgb(255, 3, 3);
+        cursor: pointer;
+    }
+
+    .but_neu {
+        background-color: rgb(0, 192, 0);
+    }
+
+    .but_neu:hover{
+        background-color:green;
+        cursor: pointer;
+    }
+
+    #recSus{
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        padding: 1vw 2vw 1vw 2vw;
+        margin: 0 auto;
+        border: 0vw solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        color: black;
+        background-color: rgb(255, 87, 87);
+    }
+
+    #recSus:hover{
+        cursor: default;
+    }
+
+    #recNeu{
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        padding: 1vw 2vw 1vw 2vw;
+        margin: auto;
+        margin-top: 0vh;/* Espace entre le span et les boutons */
+        border: 0vw solid black;
+        border-radius: 1vw;
+        font-weight: bold;
+        color: black;
+        background-color: rgb(0, 192, 0);
+    }
+
+    #recNeu:hover{
+        cursor: default;
+    }
+
+    #tr_cd{
+        position: absolute;
+        display: block;
+        height: 0;
+        width: 100vw;
+        z-index: 10;
+        margin-top: 95.5vh;
+    }
+
+    #td_countdown{
+        position: relative;
+        display: block;
+        padding: 1vh;
+        margin: 0;
+        color: white;
+    }
+
+    #countdownElement{
+        display: block;
+        text-align: center;/* Centre les boutons horizontalement */
+        width: 15vw;
+        border: 0px solid black;
+        border-radius: 1vw;
+        padding: 0.2vw;
+        font-weight: bold;
+        margin: auto;
+    }
+  }

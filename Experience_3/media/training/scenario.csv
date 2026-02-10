@@ -1,0 +1,11 @@
+id;name;type;vLastAIS;vDistAIS;headAIS;headReal;speedAIS;speedReal;to;from;nat;mmsi;imo;status;lengthAIS;lengthReal;width;built;weight;temperature;wind;waveHeight;draught;inMaritimeRoad;inFishingZone;inCoastZone;nearOtherVessel;protectedZone;recIA;gt;expIA;expGT
+0;XTENSION;Pleasure;<1;<1;167,5;166;6,8;6,5;;Lymington, United Kingdom;UK;235084617;;;13;12;4;;;;;;;0;0;1;0;0;neutre;neutre;;
+1;SAINT-MALO;Passenger/Ro-Ro Cargo;<1;<1;17,8;18,2;17,2;17,4;Portsmouth, United Kingdom;Saint Malo, France;FR;228457700;9946336;Under Way;194;193;32;2024;36,9;;;;6;0;0;1;1;0;neutre;neutre;;
+2;ANGELE N;Bulk Carrier;<1;<1;255,3;255;14,1;14;Lome, Togolese Rep;Vlissingen, Netherlands;HK;477634100;9509528;Under Way;149;190;33;2010;31,5;;;;11,2;1;0;0;0;0;suspect;suspect;;
+3;MSC TAMPA;Container Ship;<1;<1;252,5;249;21,2;21;Piraeus, Greece;Antwerpen, Belgium;LR;636021760;9317925;Under Way;294;292;32;2006;53,5;;;;12,7;1;0;0;0;0;neutre;neutre;;
+4;TORM AMORINA;Chemical/Oil Products;<1;<1;72;72,3;12,6;12,6;Rotterdam, Netherlands;Huelva, Spain;DK;219028418;9484895;Under Way;183;182;32;2012;27,4;;;;8,6;1;0;0;0;0;suspect;suspect;;
+5;STELLA MARIS;Sailing;<1;<1;258,2;258;8,1;8;;Roscoff, France;FR;227728040;;Under Way;10;10;4;;;;;;;0;0;1;0;0;suspect;suspect;;
+6;TRITON;General Cargo;<1;<1;251,3;252,1;10,6;10,4;Newport BGW, United Kingdom ;Antwerpen, Belgium;GI;236673000;9749099;Under Way;90;92;15;2015;3,4;;;;6,2;0;0;1;0;0;neutre;neutre;;
+7;SEAWAYS RED;Crude Oil Tanker;>30;>5;261,3;234,6;11,9;13,3;Ningbo, China;Karsto, Norway;MH;538004029;9596973;Under Way;274;270;48;2012;81,3;;;;13,3;1;0;0;0;0;suspect;suspect;;
+8;HIGHLAND DEFENDER;Offshore Tug/Supply ;<1;<1;58,1;57,3;11;10,8;Aberdeen, United Kingdom ;Walvis Bay, Namibia;UK;235094267;9639335;Under Way;87;85;18;2013;4,1;;;;4,7;1;0;0;0;0;neutre;neutre;;
+9;F/V LA FANETTE;Fishing;<1;<1;53,3;52,9;3,8;3,6;;Roscoff, France;FR;228021600;9669794;Fishing;24;23;6;2012;0,2;;;;4,4;1;0;0;0;0;neutre;neutre;;

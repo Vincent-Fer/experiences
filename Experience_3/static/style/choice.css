@@ -1,0 +1,212 @@
+/* Styles généraux pour la page */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7; /* Fond clair pour contraster avec le bleu */
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    overflow-y: auto; /* Scroll possible */
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    background-color: #ffffff; /* Fond blanc pour la section principale */
+    border: 1px solid #004080; /* Bordure bleue */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    min-width: 60vw;
+    max-width: 100vw;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Style pour le titre principal */
+h1 {
+    color: #004080; /* Texte bleu foncé */
+    margin-bottom: 2%;
+}
+
+/* Style pour les paragraphes */
+p {
+    color: #004080; /* Texte bleu foncé */
+    margin: 2% 0;
+}
+
+/* Style pour les divs */
+div {
+    background-color: #ffffff; /* Fond blanc pour les sections */
+    border: 1px solid #004080; /* Bordure bleue */
+    border-radius: 8px;
+    padding: 2%;
+    margin: 2% 0;
+    text-align: center;
+}
+
+/* Style pour les boutons */
+button {
+    background-color: #004080; /* Fond bleu foncé */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    margin: 1%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002868; /* Bleu plus foncé au survol */
+}
+
+#divSesExp {
+    display: flex;          /* Met les enfants côte à côte */
+    flex-wrap: wrap;        /* Passe à la ligne si trop étroit */
+    justify-content: center;/* Centre horizontalement */
+    gap: 1%;  
+    border: 0px solid black;              /* Espace entre les deux divs */
+}
+.divIn {
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+    width: 48%;             /* Prend la moitié du conteneur, avec un peu de marge */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+.divIn button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.divIn button:hover{
+    background-color: rgb(223, 222, 222);
+    color: black;
+}
+
+.divIn p{
+    color: white;
+}
+
+
+
+/* Style pour la div de feedback */
+#div_feedback {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne suivante si nécessaire */
+    justify-content: center; /* Centre les boutons */
+    gap: 1%; /* Espace entre les boutons */
+}
+
+/* Style pour les boutons de feedback */
+.feedbackSession {
+    flex: 1 1 30%;
+    min-width: 150px; /* Largeur minimale pour les boutons */
+    max-width: 30%; /* Largeur maximale pour les boutons */
+    box-sizing: border-box;
+}
+
+#none{
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+/* Styles existants conservés... */
+
+/* Ajouts/modifications spécifiques au tutoriel */
+#tutorialToggle {
+  position: absolute;
+  bottom: -60px;
+  right: 20px;
+  z-index: 1001;
+  background-color: #004080;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Supprimer les styles liés à l'overlay */
+#tutorialTooltip {
+  position: fixed;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #004080;
+  box-shadow: 0 4px 15px rgba(0,64,128,0.2);
+  z-index: 1000;
+  max-width: 300px;
+  transition: opacity 0.3s;
+}
+
+.tutorial-highlight {
+  position: relative;
+  z-index: 999;
+  animation: pulse-border 1.5s infinite;
+  box-shadow: 0 0 0 3px #0080ff, 0 0 15px rgba(0,64,128,0.3);
+  background-color: #0070df;
+  transition: box-shadow 0.3s ease;
+}
+
+@keyframes pulse-border {
+  0% { box-shadow: 0 0 0 0px rgba(0,64,128,0.4); }
+  100% { box-shadow: 0 0 0 20px rgba(0,64,128,0); }
+}
+
+#tutorialControls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.tutorial-control-btn {
+  background: #004080 !important;
+  color: white !important;
+  padding: 8px 15px !important;
+  min-width: 40px;
+}
+
+.tutorial-control-btn:hover {
+  background: #002868 !important;
+}
+
+.step-counter {
+  color: #004080;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Adaptation responsive */
+@media (max-width: 768px) {
+  #tutorialTooltip {
+    max-width: 90%;
+    left: 5% !important;
+    transform: none !important;
+  }
+}
+
+#noMission{
+    color: black;
+    font-weight: bold;
+}
+
+.disabled{
+  background-color: gray;
+  cursor: default;
+  color: black;
+}
+
+.disabled:hover{
+  background-color: gray;
+}
+
+#timeLast{
+  display: block;
+}

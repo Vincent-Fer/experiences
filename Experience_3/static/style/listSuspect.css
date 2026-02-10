@@ -1,0 +1,64 @@
+/* Styles généraux pour la page */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7; /* Fond clair pour contraster avec le bleu */
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+main {
+    display: block;
+    background-color: #ffffff; /* Fond blanc pour la section principale */
+    border: 1px solid #004080; /* Bordure bleue */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    width: 90%;
+    min-width: 400px;
+    max-width: 1000px;
+    text-align: center;
+    overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+    max-height: 90vh; /* Limite la hauteur à 90% de la fenêtre */
+}
+
+td{
+    min-width: 400px;
+    max-width: 1000px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    font-size: large;
+    border: 0px solid #004080;
+    box-sizing: border-box;
+}
+
+/* Style pour le bouton d'envoi */
+.submit-btn {
+    background-color: #004080; /* Fond bleu foncé */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #002868; /* Bleu plus foncé au survol */
+}
