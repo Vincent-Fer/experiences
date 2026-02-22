@@ -1,9 +1,0 @@
-package entities;
-
-public class Mesure {
-
-	public Mesure(String type, Integer value, Integer time) {
-		
-	}
-	
-}

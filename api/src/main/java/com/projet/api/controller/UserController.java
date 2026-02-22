@@ -11,7 +11,7 @@ import com.projet.api.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	
+
 	@GetMapping("/users")
 	public Iterable<User> getUsers(){
 		return userService.getUsers();

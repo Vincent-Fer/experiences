@@ -7,7 +7,7 @@ import com.projet.api.model.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User,Long>{
-	
-	
+
+
 
 }

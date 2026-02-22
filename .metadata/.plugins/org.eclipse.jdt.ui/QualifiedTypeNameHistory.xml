@@ -3,4 +3,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.Class"/>
     <fullyQualifiedTypeName name="model.Mesure"/>
+    <fullyQualifiedTypeName name="com.projet.api.repository.ExperimentRepository"/>
+    <fullyQualifiedTypeName name="com.projet.api.service.ExperimentService"/>
 </qualifiedTypeNameHistroy>

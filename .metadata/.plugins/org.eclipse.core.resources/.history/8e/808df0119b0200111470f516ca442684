@@ -1,7 +1,0 @@
-package utils;
-
-import src.entities;
-
-public class Mesure {
-
-}
