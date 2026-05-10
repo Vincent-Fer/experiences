@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Questionnaire démographique{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/questionnaire.css') }}">{% endblock %}
+
+{% block content %}
+    <h1>Questionnaire Démographique</h1>
+    <hr/>
+    <div class="explanations-textQuest">
+        <p>Merci de participer à cette expérimentation.<br/> Veuillez répondre aux questions suivantes de la manière la plus honnête possible. Toutes vos réponses resteront anonymes.</p>
+    </div>
+    <form id="demographic-form" action="/sendQuestionnaireDemography" method="POST">
+        <div class="question">
+            <h2>Votre âge</h2>
+            <input type="number" name="age" min="18" max="70" required style="padding:8px; border-radius:5px; border:1px solid #004080;">
+        </div>
+        <div class="question">
+            <h2>Votre genre</h2>
+            <label><input type="radio" name="genre" value="Femme" required>Femme</label>
+            <label><input type="radio" name="genre" value="Homme">Homme</label>
+            <label><input type="radio" name="genre" value="Non-binaire">Non-binaire</label>
+            <label><input type="radio" name="genre" value="Autre">Autre</label>
+        </div>
+        <div class="question">
+            <h2>Votre plus haut niveau d'études</h2>
+            <select name="etudes" required style="padding:8px; border-radius:5px; border:1px solid #004080;">
+                <option value="" disabled selected>Choisissez une option</option>
+                <option value="none">Aucun diplôme</option>
+                <option value="bac">Baccalauréat</option>
+                <option value="bac2">BTS / DUT</option>
+                <option value="bac3">Licence</option>
+                <option value="bac5">Master</option>
+                <option value="bac8">Doctorat</option>
+            </select>
+        </div>
+        <div class="question">
+            <h2>Avez-vous déjà effectué des tâches de classification de cibles en tant qu'opérateur militaire &nbsp;?</h2>
+            <label><input type="radio" name="classification" value="Oui" required> Oui</label>
+            <label><input type="radio" name="classification" value="Non"> Non</label>
+        </div>
+        <div class="question hidden" id="duree-classification-question">
+            <h2>Si oui, pendant combien de temps (en années) avez-vous effectué des tâches de classification de cibles&nbsp;?</h2>
+            <input type="number" name="duree_classification" min="0" max="50" placeholder="Nombre d'années" style="padding:8px; border-radius:5px; border:1px solid #004080;">
+        </div>
+        <div class="question">
+            <h2>Utilisez-vous l'intelligence artificielle au quotidien&nbsp;?</h2>
+            <label><input type="radio" name="utilisation_ia" value="Oui" required>Oui</label>
+            <label><input type="radio" name="utilisation_ia" value="Non">Non</label>
+        </div>
+        <div class="question">
+            <h2>Sur une échelle de 1 à 7, à quel point êtes-vous familier(ère) avec ce qu'est l'intelligence artificielle&nbsp;?</h2>
+            <div class="rating-row">
+                <div class="rating-scale" id="ia-familiarite-scale">
+                    <button type="button" class="rating-button" data-value="1">1</button>
+                    <button type="button" class="rating-button" data-value="2">2</button>
+                    <button type="button" class="rating-button" data-value="3">3</button>
+                    <button type="button" class="rating-button" data-value="4">4</button>
+                    <button type="button" class="rating-button" data-value="5">5</button>
+                    <button type="button" class="rating-button" data-value="6">6</button>
+                    <button type="button" class="rating-button" data-value="7">7</button>
+                </div>
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout familier(ère)</span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span class="right-label">Très familier(ère)</span>
+                </div>
+                <input type="hidden" name="familiarite_ia" id="familiarite-ia-input" required>
+            </div>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer</button>
+    </form>
+    <div id="success-message" style="display:none; color:green; margin-top:2%;">Merci pour vos réponses !</div>
+<script src="{{ url_for('static', filename='script/questionnaireDemography.js') }}"></script>
+{% endblock %}
+

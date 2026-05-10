@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}End Game{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/endGame.css') }}">{% endblock %}
+
+{% block content %}
+    <h1>Fin de session</h1>
+    <div id="divFin"></div>
+    {% if message %}
+        <span style="color: red; margin-top: 10px;">
+            {{ message }}
+        </span>
+    {% endif %}
+    <form id="myForm" method="POST" action="/choice">
+        <!-- tes champs ici -->
+        <button class="previous" type="submit" id="previousPage">Revenir à la page choix</button>
+    </form>
+    <script src="{{ url_for('static', filename='script/endGame.js') }}" defer></script>
+    <script>
+        idSes = Number({{idSession}}) + 1
+    </script>
+{% endblock %}

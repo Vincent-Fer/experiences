@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Game{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/game.css') }}">{% endblock %}
+
+{% block content %}
+<div id="case">
+    <table id="tab_data">
+        <tr id="tr_th">
+            <th class="th_vesData" id="th_sus">
+                Liste suspects
+            </th>
+            <th class="th_vesData" id="th_ais">
+                Données AIS
+            </th>
+            <th class="th_vesData" id="th_sens">
+                Données capteurs
+            </th>
+        </tr>
+        <tr id="tr_vesData">
+            <td class="vesData" id="tdSus">
+                <p>{{sus[0]}}</p>
+                <p>{{sus[1]}}</p>
+                <p>{{sus[2]}}</p>
+                <p>{{sus[3]}}</p>
+                <p>{{sus[4]}}</p>
+                <p>{{sus[5]}}</p>
+                <p>{{sus[6]}}</p>
+                <p>{{sus[7]}}</p>
+                <p>{{sus[8]}}</p>
+                <p>{{sus[9]}}</p>
+                <p>{{sus[10]}}</p>
+                <p>{{sus[11]}}</p>
+                <p>{{sus[12]}}</p>
+                <p>{{sus[13]}}</p>
+                <p>{{sus[14]}}</p>
+            </td>
+            <td class="vesData" id="tdAis">
+                <p><strong>Vitesse</strong> : {{ves_dict["vspeedAIS"]}}</p>
+                <p><strong>Cap</strong> : {{ves_dict["vheadAIS"]}}</p>
+                <p><strong>Longueur</strong> : {{ves_dict["vlengthAIS"]}}</p>
+                <p><strong>Largeur</strong> : {{ves_dict["vwidth"]}}</p>
+                <p><strong>MAJ</strong> : {{ves_dict["vLastAIS"]}}</p>
+                <p><strong>Type</strong> : {{ves_dict["vtype"]}}</p>
+                <p><strong>Nom</strong> : {{ves_dict["vname"]}}</p>
+                <p><strong>Nat</strong> : {{ves_dict["vnat"]}}</p>
+                <p><strong>MMSI</strong> : {{ves_dict["vmmsi"]}}</p>
+                <p><strong>IMO</strong> : {{ves_dict["vimo"]}}</p>
+                <p><strong>De</strong> : {{ves_dict["vfrom"]}}</p>
+                <p><strong>A</strong> : {{ves_dict["vto"]}}</p>
+                <p><strong>Statut</strong> : {{ves_dict["vstatus"]}}</p>
+                <p><strong>Année</strong> : {{ves_dict["vbuilt"]}}</p>
+                <p><strong>Poids</strong> : {{ves_dict["vweight"]}}</p>
+                <p><strong>Tirant</strong> : {{ves_dict["vdraught"]}}</p>
+            </td>
+            <td class="vesData" id="tdSensor">
+                <p><strong>Vitesse</strong> : {{ves_dict["vspeedReal"]}}</p>
+                <p><strong>Cap</strong> : {{ves_dict["vheadReal"]}}</p>
+                <p><strong>Longueur</strong> : {{ves_dict["vlengthReal"]}}</p>
+                <p><strong>Dist. AIS</strong> : {{ves_dict["vDistAIS"]}}</p>
+                <p><strong>Route maritime</strong> : {{ves_dict["inMaritimeRoad"]}}</p>
+                <p><strong>Zone de pèche</strong> : {{ves_dict["inFishingZone"]}}</p>
+                <p><strong>Zone côtière</strong> : {{ves_dict["inCoastZone"]}}</p>
+                <p><strong>Navire proche</strong> : {{ves_dict["nearOtherVessel"]}}</p>
+                <p><strong>Zone protégée</strong> : {{ves_dict["protectedZone"]}}</p>
+            </td>
+        </tr>
+        <tr id="tr_ves">
+            <td colspan="3" id="td_ves">
+                <img id="imgVes" src="data:image/png;base64,{{ vessel_image }}"/>
+                <div class="loupe" id="loupe"></div>
+            </td>
+        </tr>
+    </table>
+    <table id="tab_tac">
+        <tr id="tr_tac">
+            <td id="td_img_tac">
+                <img id="imgTac" src="data:image/png;base64,{{ encoded_image }}"/>
+            </td>
+        </tr>
+        <tr id="tr_dec">
+            <td class="td_dec" id="tdDecIni">
+                <span class="td_span" id="targetIs">Ce navire est</span>
+                <div class="btn_group">
+                        <button class="but_sus" id="butIniSus">Suspect</button>
+                        <button class="but_neu" id="butIniNeu">Neutre</button>
+                </div>
+            </td>
+            <td class="td_dec" id="tdRec">
+                <span class="td_span" id="recIs">Recommandation IA</span>
+                <div class="btn_group">
+                    <form id="formRecIA" method="POST" action="/click">
+                        <div class="but_sus" id="recSus">Suspect</div>
+                        <div class="but_neu" id="recNeu">Neutre</div>
+                    </form>
+                </div>
+            </td>
+            <td class="td_dec" id="tdDecFin">
+                <span class="td_span" id="finTargetIs">Finalement, ce navire est :</span>
+                <div class="btn_group">
+                    <form id="formFin" method="POST" action="/click">
+                        <input type="hidden" name="typeDec" value="fin"/>
+                        <input type="hidden" name="objectName" id="inputFin" value=""/>
+                        <button class="but_sus" type="submit" id="butFinSus">Suspect</button>
+                        <button class="but_neu" type="submit" id="butFinNeu">Neutre</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr id="tr_cd">
+            <td id="td_countdown">
+                <span class="normal" id="countdownElement"></span>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="{{ url_for('static', filename='script/game.js') }}" defer></script>
+{% endblock %}

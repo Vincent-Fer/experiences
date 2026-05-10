@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+
+{% block title %}Questionnaire Initial{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='style/questionnaire.css') }}">{% endblock %}
+
+{% block content %}
+    <div class="rating-container">
+        <h1>Questionnaire initial sur la confiance</h1>
+        <div className="explanations-textQuest">
+            <p>
+                Merci de compléter ce formulaire comportant
+                12 questions sur la confiance que vous ressentez envers l'intelligence artificielle en général. 
+            </p>
+            <p>
+                Pour chacune de ces questions, votre note doit aller de
+                1 (vous n'êtes pas du tout d'accord avec la proposition)
+                à 7 (vous êtes parfaitement en accord avec la proposition).
+            </p>
+        </div>
+        <form id="questionnaireForm" method="POST" action="/sendQuestionnaireInitial">
+            <h2>En général, l'intelligence artificielle est trompeuse</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question1" data-value="1">1</button>
+                    <button type="button" class="rating-button question1" data-value="2">2</button>
+                    <button type="button" class="rating-button question1" data-value="3">3</button>
+                    <button type="button" class="rating-button question1" data-value="4">4</button>
+                    <button type="button" class="rating-button question1" data-value="5">5</button>
+                    <button type="button" class="rating-button question1" data-value="6">6</button>
+                    <button type="button" class="rating-button question1" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question1" id="hidden-question1" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, l'intelligence artificielle se comporte de façon sournoise</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question2" data-value="1">1</button>
+                    <button type="button" class="rating-button question2" data-value="2">2</button>
+                    <button type="button" class="rating-button question2" data-value="3">3</button>
+                    <button type="button" class="rating-button question2" data-value="4">4</button>
+                    <button type="button" class="rating-button question2" data-value="5">5</button>
+                    <button type="button" class="rating-button question2" data-value="6">6</button>
+                    <button type="button" class="rating-button question2" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question2" id="hidden-question2" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, je me méfie de l'intention, de l'action ou des résultats de l'intelligence artificielle</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question3" data-value="1">1</button>
+                    <button type="button" class="rating-button question3" data-value="2">2</button>
+                    <button type="button" class="rating-button question3" data-value="3">3</button>
+                    <button type="button" class="rating-button question3" data-value="4">4</button>
+                    <button type="button" class="rating-button question3" data-value="5">5</button>
+                    <button type="button" class="rating-button question3" data-value="6">6</button>
+                    <button type="button" class="rating-button question3" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question3" id="hidden-question3" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, je me méfie de l'intelligence artificielle</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question4" data-value="1">1</button>
+                    <button type="button" class="rating-button question4" data-value="2">2</button>
+                    <button type="button" class="rating-button question4" data-value="3">3</button>
+                    <button type="button" class="rating-button question4" data-value="4">4</button>
+                    <button type="button" class="rating-button question4" data-value="5">5</button>
+                    <button type="button" class="rating-button question4" data-value="6">6</button>
+                    <button type="button" class="rating-button question4" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question4" id="hidden-question4" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, les actions de l'intelligence artificielle ont un résultat nocif ou préjudiciable</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question5" data-value="1">1</button>
+                    <button type="button" class="rating-button question5" data-value="2">2</button>
+                    <button type="button" class="rating-button question5" data-value="3">3</button>
+                    <button type="button" class="rating-button question5" data-value="4">4</button>
+                    <button type="button" class="rating-button question5" data-value="5">5</button>
+                    <button type="button" class="rating-button question5" data-value="6">6</button>
+                    <button type="button" class="rating-button question5" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question5" id="hidden-question5" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, j'ai confiance dans les capacités de l'intelligence artificielle</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question6" data-value="1">1</button>
+                    <button type="button" class="rating-button question6" data-value="2">2</button>
+                    <button type="button" class="rating-button question6" data-value="3">3</button>
+                    <button type="button" class="rating-button question6" data-value="4">4</button>
+                    <button type="button" class="rating-button question6" data-value="5">5</button>
+                    <button type="button" class="rating-button question6" data-value="6">6</button>
+                    <button type="button" class="rating-button question6" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question6" id="hidden-question6" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, l'intelligence artificielle apporte de la sécurité</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question7" data-value="1">1</button>
+                    <button type="button" class="rating-button question7" data-value="2">2</button>
+                    <button type="button" class="rating-button question7" data-value="3">3</button>
+                    <button type="button" class="rating-button question7" data-value="4">4</button>
+                    <button type="button" class="rating-button question7" data-value="5">5</button>
+                    <button type="button" class="rating-button question7" data-value="6">6</button>
+                    <button type="button" class="rating-button question7" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question7" id="hidden-question7" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, l'intelligence artificielle est intègre</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question8" data-value="1">1</button>
+                    <button type="button" class="rating-button question8" data-value="2">2</button>
+                    <button type="button" class="rating-button question8" data-value="3">3</button>
+                    <button type="button" class="rating-button question8" data-value="4">4</button>
+                    <button type="button" class="rating-button question8" data-value="5">5</button>
+                    <button type="button" class="rating-button question8" data-value="6">6</button>
+                    <button type="button" class="rating-button question8" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question8" id="hidden-question8" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, l'intelligence artificielle est sûre</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question9" data-value="1">1</button>
+                    <button type="button" class="rating-button question9" data-value="2">2</button>
+                    <button type="button" class="rating-button question9" data-value="3">3</button>
+                    <button type="button" class="rating-button question9" data-value="4">4</button>
+                    <button type="button" class="rating-button question9" data-value="5">5</button>
+                    <button type="button" class="rating-button question9" data-value="6">6</button>
+                    <button type="button" class="rating-button question9" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question9" id="hidden-question9" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, l'intelligence artificielle est fiable</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question10" data-value="1">1</button>
+                    <button type="button" class="rating-button question10" data-value="2">2</button>
+                    <button type="button" class="rating-button question10" data-value="3">3</button>
+                    <button type="button" class="rating-button question10" data-value="4">4</button>
+                    <button type="button" class="rating-button question10" data-value="5">5</button>
+                    <button type="button" class="rating-button question10" data-value="6">6</button>
+                    <button type="button" class="rating-button question10" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question10" id="hidden-question10" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, je peux avoir confiance dans l'intelligence artificielle</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question11" data-value="1">1</button>
+                    <button type="button" class="rating-button question11" data-value="2">2</button>
+                    <button type="button" class="rating-button question11" data-value="3">3</button>
+                    <button type="button" class="rating-button question11" data-value="4">4</button>
+                    <button type="button" class="rating-button question11" data-value="5">5</button>
+                    <button type="button" class="rating-button question11" data-value="6">6</button>
+                    <button type="button" class="rating-button question11" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question11" id="hidden-question11" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            
+            <h2>En général, je suis familier avec l'intelligence artificielle</h2>
+            <div class="rating-row">
+                <div class="rating-scale">
+                    <button type="button" class="rating-button question12" data-value="1">1</button>
+                    <button type="button" class="rating-button question12" data-value="2">2</button>
+                    <button type="button" class="rating-button question12" data-value="3">3</button>
+                    <button type="button" class="rating-button question12" data-value="4">4</button>
+                    <button type="button" class="rating-button question12" data-value="5">5</button>
+                    <button type="button" class="rating-button question12" data-value="6">6</button>
+                    <button type="button" class="rating-button question12" data-value="7">7</button>
+                </div>
+                <input type="hidden" name="question12" id="hidden-question12" value="">
+                <div class="rating-labels">
+                    <span class="left-label">Pas du tout</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="right-label">Parfaitement</span>
+                </div>
+            </div>
+            <button type="submit" id="submit-btn">Envoyer</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script/questionnaire.js') }}"></script>
+{% endblock %}

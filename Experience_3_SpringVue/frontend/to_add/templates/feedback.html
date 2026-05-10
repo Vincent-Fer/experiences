@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/game.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/feedback.css') }}">
+{% endblock %}
+
+{% block content %}
+    {{feedback | safe }}
+    <script src="{{ url_for('static', filename='script/feedback.js') }}" defer></script>
+{% endblock %}

@@ -1,0 +1,518 @@
+/* Styles généraux */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+}
+
+table{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.case {
+    background-color: #fff;
+    border: 1px solid #004080;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2vh 2vw;
+    width: 80vw;
+    box-sizing: border-box;
+}
+
+.case h1 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.case h2 {
+    color: #004080;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.case p {
+    line-height: 1.2;
+}
+
+.case ul {
+    margin: 0.5rem 0 1.2rem 2rem;
+    padding-left: 1.2rem;
+}
+
+.case li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid #dbe6f1;
+    margin: 2.5rem 0 2rem 0;
+}
+
+/* Boutons */
+.previous {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.previous:hover {
+    cursor: pointer;
+    background-color: #01264a;
+}
+
+/* Spécial pour les spans colorés */
+span[style*="color: red"] {
+    color: #c0392b !important;
+    font-weight: bold;
+}
+span[style*="color: green"] {
+    color: #218c41 !important;
+    font-weight: bold;
+}
+span[style*="color: purple"] {
+    color: #7d3c98 !important;
+    font-weight: bold;
+}
+span[style*="color: brown"] {
+    color: #8d5524 !important;
+    font-weight: bold;
+}
+span[style*="color: grey"] {
+    color: #7b7b7b !important;
+    font-weight: bold;
+}
+span[style*="color: rgb(253, 156, 0)"] {
+    color: #fd9c00 !important;
+    font-weight: bold;
+}
+
+/* Pour les spans de points */
+span[style*="font-weight: bold"] {
+    font-weight: bold !important;
+}
+span[style*="font-style: italic"] {
+    font-style: italic !important;
+}
+
+.caseExample {
+    position: absolute;
+    margin-left: -2vw;
+    height: 85vh;
+    width: 80vw;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#cases-container{
+    position: absolute;
+    height: 85vh;
+    width: 80vw;
+    margin-left: -1vw;
+}
+
+#tab_data{
+    position: absolute;
+    margin: 0;
+    width: 39.99vw;
+}
+
+#tab_tac{
+    position: absolute;
+    width: 60.01vw;
+    margin-left: 39.99vw;
+}
+
+#tr_th{
+    position: absolute;
+    width: 39.99vw;
+    height: 5vh;
+    background-color: #004080;
+    color: white;
+    border-left: 0px solid #004080;
+    box-sizing: border-box;
+    vertical-align: center;
+    padding: 1vh 0 0 0;
+    left: 0;
+}
+
+.th_vesData{
+    width: 13.33vw;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#th_sus{
+    position: absolute;
+    margin-left: 0;
+}
+
+#th_ais{
+    position: absolute;
+    margin-left: 13.33vw;
+}
+
+#th_sens{
+    position: absolute;
+    margin-left: 26.66vw;
+}
+
+#tr_vesData{
+    position: absolute;
+    margin: 5vh 0 0 0;
+    box-sizing: border-box;
+    left: 0;
+}
+
+.vesData {
+    margin: 0 0 0 0;
+    width: 33.33vw;
+    height: 40vh;
+    padding: 0.5vh 0.5vw;
+    box-sizing: border-box;
+    background-color: #f0f4f7;
+    vertical-align: top;
+    border-left: 0.1vh solid #004080;
+}
+
+#tdSus{
+    border-left: 0px;
+}
+
+#th_sus{
+    border-left: 0px;
+}
+
+td.vesData p {
+    display: block;
+    width: 100%;
+    margin: 0;        /* Optionnel : retire les marges par défaut */
+    box-sizing: border-box; /* Pour inclure padding/border dans la largeur */
+}
+
+#tr_ves{
+    position: absolute;
+    margin: 45vh 0 0 0;
+    left: 0;
+}
+
+#td_ves {
+    position: absolute;
+    padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+}
+
+#imgVes {
+    position: inherit;
+    padding: 0;
+    margin: 0 0 0 0;
+    width: 39.99vw;
+    height: 40vh;
+}
+
+#imgVes:hover{
+    cursor:none;
+}
+
+.loupe {
+    display: none;
+    position: absolute;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10000;
+}
+
+#tr_tac{
+    position: absolute;
+    left: 0;
+}
+
+#td_img_tac {
+    position: absolute;
+    padding: 0; /* pour éviter que le padding ne réduise la hauteur utile */
+    width: 39.99vw;
+}
+
+#imgTac {
+    position: absolute;
+    margin-left: 0;
+    height: 85vh;
+    width: 39.99vw;
+    z-index: 100;
+}
+
+#tr_dec{
+    position: absolute;
+    display: block;
+    width: 40vw;
+    height: 5vh;
+    margin-top: 74vh;
+    left: 0;
+    z-index: 101;
+}
+
+.td_dec{
+    position: relative;
+    display: block;
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+#tdRec{
+    display: none;
+}
+
+#tdDecFin{
+    display: none;
+}
+
+.td_span{
+    display: block;
+    font-weight: bold;
+}
+
+.btn_group {
+    display: block;
+    text-align: center;
+}
+
+.but_sus, .but_neu {
+    display: inline-block;
+    padding: 1vh 1vw;
+    border: 0;
+    border-radius: 1vw;
+    font-weight: bold;
+}
+
+.but_sus {
+    background-color: rgb(255, 87, 87);
+}
+.but_sus:hover {
+    background-color: rgb(255, 3, 3);
+    cursor: pointer;
+}
+
+.but_neu {
+    background-color: rgb(0, 192, 0);
+}
+
+.but_neu:hover{
+    background-color:green;
+    cursor: pointer;
+}
+
+#recSus{
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vw;
+    border: 0vw solid black;
+    border-radius: 1vw;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 87, 87);
+}
+
+#recSus:hover{
+    cursor: default;
+}
+
+#recNeu{
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vw;
+    border: 0vw solid black;
+    border-radius: 1vw;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: rgb(0, 192, 0);
+}
+
+#recNeu:hover{
+    cursor: default;
+}
+
+#tr_cd{
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 40vw;
+    margin-top: 80vh;
+    z-index: 101;
+    left: 0;
+}
+
+.td_countdown{
+    position: relative;
+    display: block;
+    margin: auto;
+    color: white;
+}
+
+.countdownElement{
+    display: block;
+    text-align: center;/* Centre les boutons horizontalement */
+    width: fit-content;
+    max-width: 20vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    min-height: 4vh;
+    border: 0px solid black;
+    border-radius: 1vw;
+    font-weight: bold;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.normal{
+    background-color: green;
+}
+
+.danger{
+    background-color: red;
+}
+
+.warning{
+    background-color: orange;
+}
+
+#nextCase{
+    position: relative;
+    margin-top: 90vh;
+}
+
+.halo-effect {
+  position: relative;
+  box-shadow: 0 0 8px 4px rgba(0, 123, 255, 0.7);
+  animation: pulseHalo 2s infinite;
+  border-radius: 8px;
+  z-index: 1000;
+}
+@keyframes pulseHalo {
+  0%, 100% { box-shadow: 0 0 8px 4px rgba(0, 123, 255, 0.7); }
+  50% { box-shadow: 0 0 16px 8px rgba(0, 123, 255, 1); }
+}
+.chat-bubble {
+  position: absolute;
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 16px 16px 48px 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #01264a;
+  max-width: 340px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #333;
+  min-width: 220px;
+  min-height: 64px;
+}
+.guide-nav-btns {
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  width: calc(100% - 32px);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1001;
+}
+.guide-nav-btns button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: background 0.2s;
+}
+.guide-nav-btns button[disabled] {
+  background: #aaa;
+  cursor: not-allowed;
+}
+#startGuideBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1200;
+  padding: 12px 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 16px;
+}
+
+.case-nav-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 16px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 200;
+}
+.case-nav-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#caseNextBtn{
+    margin: 53%;
+}
+
+#casePrevBtn{
+    margin: 50%;
+}
+
+#interface{
+    display: block;
+    max-width: 95%;
+    margin: auto;
+}
