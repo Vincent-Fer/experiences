@@ -1,0 +1,185 @@
+/* Styles globaux pour les pages centrées et modernes */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    background-color: #ffffff;
+    border: 1px solid #004080;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Style pour les titres */
+.page-title {
+    color: #004080;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Style pour les sous-titres */
+.page-subtitle {
+    color: #004080;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Style pour les paragraphes */
+.page-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Style pour les formulaires */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    color: #004080;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Style pour les groupes de radio */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Style pour les boutons */
+.page-button {
+    background-color: #004080;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.page-button:hover {
+    background-color: #002868;
+}
+
+/* Style pour les messages de succès */
+.success-message {
+    color: #28a745;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #d4edda;
+    border-radius: 5px;
+}
+
+/* Style pour les sliders */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.slider {
+    width: 100%;
+    max-width: 300px;
+}
+
+.slider-value {
+    font-weight: bold;
+    color: #004080;
+}
+
+/* Style pour les tableaux */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #004080;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style pour les images */
+.page-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style pour les sections */
+.section {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.section-title {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}

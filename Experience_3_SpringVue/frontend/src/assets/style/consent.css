@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;              /* largeur réduite */
+  margin: 32px auto 0 auto;  /* espace en haut, centré horizontalement */
+  padding: 24px 18px 18px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0002;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;                    /* positionne le formulaire en haut */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1a2d4d;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Éléments clés */
+table {
+  width: 100% !important;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 8px 6px;
+  border: 1px solid #c3c3c3;
+  vertical-align: top;
+}
+
+.question {
+  font-weight: 500;
+}
+
+.radio-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.initiales-input {
+  text-align: center;
+  width: 60px;
+  padding: 3px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.form-row, .signature-row {
+  max-width: 170mm;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.form-row label, .signature-row label {
+  min-width: 90px;
+  font-weight: 500;
+}
+
+.form-row input[type="text"], .form-row input[type="number"], .form-row input[type="date"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.signature-box {
+  width: 100%;
+  min-width: 160px;
+  max-width: 320px;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fafafa;
+  cursor: crosshair;
+  margin-bottom: 6px;
+  touch-action: none;
+  box-sizing: border-box;
+}
+
+.signature-row #imgSignature {
+  max-width: 160mm !important;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 0.95em;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.btn {
+  background: #007BFF;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+.btn.enabled {
+  opacity: 1;
+}
+.btn:disabled {
+  cursor: not-allowed;
+}
+.clear-btn {
+  background: #ddd;
+  color: #333;
+  margin-left: 8px;
+}
