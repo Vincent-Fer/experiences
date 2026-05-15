@@ -1,4 +1,5 @@
 # Experience 3 - Spring Boot + Vue.js
+## Project made with mistral-large-3 in agent mode
 
 This project is a migration of the original Flask application to a modern architecture with:
 - **Backend**: Java Spring Boot
