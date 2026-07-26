@@ -1,0 +1,64 @@
+/* Styles généraux pour la page */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7; /* Fond clair pour contraster avec le bleu */
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+main {
+    background-color: #ffffff; /* Fond blanc pour la section principale */
+    border: 1px solid #004080; /* Bordure bleue */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 4%;
+    width: 100%;
+    text-align: center;
+}
+
+/* Style pour le titre principal */
+h1 {
+    color: #004080; /* Texte bleu foncé */
+    margin-bottom: 2%;
+}
+
+/* Style pour le paragraphe */
+p {
+    color: #004080; /* Texte bleu foncé */
+    margin-bottom: 4%;
+}
+
+/* Style pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2%; /* Espace entre les champs du formulaire */
+}
+
+/* Style pour les inputs */
+input[type="text"], input[type="password"] {
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin:1% 0 1% 0;
+}
+
+/* Style pour le bouton de soumission */
+input[type="submit"] {
+    background-color: #004080; /* Fond bleu foncé */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 2% 4%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #002868; /* Bleu plus foncé au survol */
+}

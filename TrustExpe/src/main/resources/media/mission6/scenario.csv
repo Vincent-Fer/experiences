@@ -1,0 +1,31 @@
+id;name;type;vLastAIS;vDistAIS;headAIS;headReal;speedAIS;speedReal;to;from;nat;mmsi;imo;status;lengthAIS;lengthReal;width;built;weight;temperature;wind;waveHeight;draught;inMaritimeRoad;inFishingZone;inCoastZone;nearOtherVessel;protectedZone;recIA;gt;expIA;expGT
+0;ASPEN;Crude Oil Tanker;<1;<1;81,7;80,3;12,1;12;Donges, France;Corpus Christi, United States;LR;636023947;9818058;Under Way;250;252;44;2019;62,2;;;;13,2;0;0;0;0;0;neutre;neutre;;
+1;X-PRESS GODAVARI;Container Ship;<1;<1;340;338,2;9,8;9,7;Rotterdam, Netherlands;Bilbao, Spain;MT;229191000;9353735;Under Way;155;153;21;2008;8,9;;;;6;0;0;0;0;0;neutre;neutre;;
+2;CEMGULF;Cement Carrier;<1;<1;188,3;185;9,8;10;Gijon, Spain;Plymouth, United Kingdom;AG;305241000;9226762;Under Way;100;103;16;2001;4;;;;4,1;0;0;0;0;0;neutre;neutre;;
+3;FRONT FUSION;Crude Oil Tanker;<1;<1;23,6;23;12,7;12,6;Rotterdam, Netherlands;Sohar, Oman;MH;538009153;9887803;Under Way;250;251;44;2021;62,8;;;;13,9;0;0;0;0;0;neutre;suspect;les données AIS et captées sont cohérentes entre elles et avec les images;Le nom sur le navire ne correspond pas à celui déclaré et le drapeau non plus
+4;TRANS BOTNIA;Ro-Ro Cargo;<1;<1;342,5;345;13,9;13,7;Poole, United Kingdom;Bilbao, Spain;FR;228315700;9170999;Under Way;156;155;22;1999;12,1;;;;6;0;0;0;0;0;neutre;neutre;;
+5;CORAL FRASERI;Liquefied Gas;<1;<1;73,8;73;13,5;13;Brest, France;Jacksonville, United States;LR;636022010;9378278;Under Way;137;134;20;2010;10,1;;;;6,2;1;0;0;0;0;neutre;neutre;;
+6;BALTIC PETREL;Container Ship;>5;>2;186,1;206;10,6;12,2;Yap, Micronesia;Skagen Anch., Denmark;PA;352005500;9313216;Under Way;169;160;27;2005;16,3;;;;9,1;1;0;0;0;0;suspect;neutre;l'écart entre la vitesse mesurée et la vitesse déclarée est important ainsi que que le cap mesuré et le cap déclaré;
+7;LADY NAEIMA;Bulk Carrier;<1;<1;153,8;153;11,8;11;Bayonne, France;Klaipeda, Lithuania;PW;511101226;9223643;Under Way;137;135;23;2000;10;;;;5,1;0;0;0;0;0;neutre;neutre;;
+8;FRENCH WARSHIP;Military Ops;<1;<1;24,7;24,5;19;19,1;;Toulon, France;FR;227000000;;Under Way;93;90;14;;;;;;;0;0;0;0;0;neutre;neutre;;
+9;SEAWOLF;Yacht;<1;<1;23,5;23;9,8;9,8;Falmouth, United Kingdom;Gibraltar, Gibraltar;MH;538070194;5076298;Under Way;59;58;11;1957;0,8;;;;4,8;1;0;0;0;0;neutre;neutre;les données AIS et captées sont cohérentes entre elles et avec les images;
+10;F/V LUDIVINE II;Fishing;<1;<1;21;21,5;2,6;2,5;Fishing Grounds;Brest, France;FR;227581000;;Fishing;15;15;6;;;;;;;0;1;0;0;0;neutre;neutre;;
+11;WILSON GDYNIA;General Cargo;<1;<1;15,3;15;9,2;9,4;Rotterdam, Netherlands;Ceuta, Spain;BB;314192000;9056064;Under Way;88;87;13;1994;2,5;;;;5,6;1;0;0;0;0;neutre;neutre;;
+12;NUEVO PEREZ;Fishing;<1;<1;11,7;11,5;1,1;1,1;;Celeiro, Spain;ES;225384000;9515838;Fishing;32;31;7;2008;0,3;;;;;0;1;0;1;0;neutre;neutre;;
+13;POLESIE;Bulk Carrier;<1;<1;70,2;70;4,3;4;Rouen, France;Southampton, United Kingdom;BS;311018000;9488097;Under Way;190;188;28;2009;24,1;;;;5,9;0;0;0;0;0;suspect;suspect;le navire n'a pas le bon cap pour rejoindre Rouen, France depuis Southampton, United Kingdom. Il est également trop lent pour un navire de type Bulk Carrier;
+14;FRAM PRINCE;Offshore Tug/Supply;<1;<1;221,9;221;5,3;5,3;Aliaga, Turkey;Agotnes, Norway;CY;210422000;9709049;Restricted;84;83;19;2021;5;;;;8,1;1;0;0;1;0;neutre;neutre;;
+15;PAX VOBIS;Fishing;<1;<1;348,8;347;9,6;9,6;Loctudy, France;Fishing Grounds;FR;228158000;;Under Way;20;21;6;;;;;;3,5;0;0;0;0;0;neutre;suspect;les données AIS et captées sont cohérentes entre elles et avec les images;Le nom sur le navire ne correspond pas à celui de l'AIS.
+16;ARKLOW COAST;General Cargo;<1;<1;162;163;9,4;9,5;Santander, Spain;Sluiskil, Netherlands;IE;250006644;9757151;Under Way;87;86;15;2022;3;;;;6,2;1;0;0;0;0;neutre;neutre;;
+17;;;;;;229;;6,3;;;;;;;;18;;;;;;;;0;0;0;0;0;suspect;suspect;le navire ne déclare pas d'AIS alors que sa taille mesurée est de 18m;
+18;LA PALOMA II;Fishing;<1;<1;19,7;19,5;1;0,8;;Lorient, France;FR;228104000;8016823;Under Way;34;35;8;1981;0,3;;;;;0;1;0;1;0;neutre;neutre;;
+19;ABLIANI;Crude Oil Tanker;<1;<1;57,7;56,8;12,2;12;La Rochelle, France;As Suways (Suez) Anch., Egypt;MT;256903000;9693068;Under Way;250;251;44;2015;62,4;;;;14;0;0;0;0;0;neutre;neutre;;
+20;JUAN DE LA COSA;Hospital;<1;<1;188,3;188;11,5;12;MEDICAL CARE;Santander, Spain;ES;224612000;9328156;Under Way;75;76;14;2006;2,6;;;;4,7;0;0;0;1;0;neutre;neutre;;
+21;DRUMBEAT;Yatcht;>10;>2;203,5;203;12,3;14;Gibraltar, Gibraltar;Lerwick, United Kingdomï¿½;KY;319698000;8987694;Under Way;53;51;10;2002;0,4;;;;7;1;0;0;0;0;suspect;suspect;le navire n'a pas émis d'AIS depuis plus de 10 minutes et est distant d'au moins 2 NM de sa position réelle. Son type semble Sailing Vessel et non pas Yacht;
+22;ARKLOW BAY;General Cargo;<1;<1;305;310;11,2;11;DEBRM;Montoir, France;NL;244700336;9638771;Under Way;119;115;19;2014;5,1;;;;6,4;0;0;0;0;0;suspect;neutre;la destination n'est pas connue de la base de donnée;
+23;AVENIR;Pleasure Craft;<1;<1;171,3;171;5,6;6;;Saint Agnes, United Kingdom;NL;244170198;;;15;15;5;;;;;;;0;0;0;0;0;neutre;suspect;;
+24;FINDER;Fishing;<1;<1;21,3;21;3,2;3,1;;Celeiro, Spain;ES;224175960;8743995;Fishing;18;33;6;2005;0,3;;;;9,5;0;1;0;1;0;suspect;suspect;la cible déclare avoir une longueur de 18m alors que la taille mesurée est de 33m;
+25;GALIANA PRIMERO;Fishing;<1;<1;31,4;31,8;0,5;0,5;CUMPLIR CONDENA;Celeiro, Spain;ES;224658000;;;29;28;8;;;;;;3;0;1;0;1;0;neutre;neutre;;
+26;SEA JEWEL;Crude Oil Tanker;<1;<1;36,1;35;22,1;22,4;Skagen, Denmark;Barcelona, Spain;PA;353221000;9607722;Under Way;249;247;44;2013;33,4;;;;10,1;1;0;0;0;0;suspect;neutre;la vitesse est trop élevée pour un navire de type Crude Oil Tanker. Son poids est faible pour un navire de cette taille;
+27;SAN MARCO MAERSK;Container Ship;<1;<1;212;213,5;10,8;10,9;Tanger Med, Morocco;Antwerpen, Belgium;DK;219101000;9622215;Under Way;333;330;48;2013;118,9;;;;10,9;1;0;0;0;0;neutre;neutre;;
+28;GINGA LIGER;Chemical/Oil Products;<1;<1;206,1;206;13,9;14,5;Jorf Lasfar, Morocco;Rotterdam, Netherlands;SG;563120600;9893448;Under Way;159;155;27;2021;15,9;;;;7;1;0;0;1;0;suspect;suspect;Le radar dï¿½tecte une cible trï¿½s proche du navire, ce qui est Suspect pour un Tanker situï¿½ dans un rail maritime.;
+29;HOUSTON STAR;Oil Products Tanker;<1;<1;24;25;15,6;15,4;Ust-Luga Anch., Russia;As Suways / Suez Port, Egypt;GW;630001163;9319882;Under Way;249;245;44;2007;62,2;;;;14,5;1;0;0;0;0;neutre;neutre;;

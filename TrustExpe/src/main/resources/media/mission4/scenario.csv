@@ -1,0 +1,34 @@
+id;name;type;vLastAIS;vDistAIS;headAIS;headReal;speedAIS;speedReal;to;from;nat;mmsi;imo;status;lengthAIS;lengthReal;width;built;weight;temperature;wind;waveHeight;draught;inMaritimeRoad;inFishingZone;inCoastZone;nearOtherVessel;protectedZone;recIA;gt;expIA;expGT
+0;SAMPOGRACHT;General Cargo;<1;<1;103,2;104;16;16,1;Cherbourg, France;Baltimore, USA, United States ;NL;246396000;9288071;Under Way;185;183;25;2005;18,3;;;;8,6;1;1;0;0;0;neutre;neutre;;
+1;WISBY WAVE;Chemical/Oil Products;<1;<1;114;112,3;12,3;12;Antwerpen, Belgium;Galway, Ireland;NL;246108000;9398486;Under Way;116;117;15;2009;4,3;;;;6,6;1;0;0;0;0;neutre;neutre;;
+2;ARKLOW WOOD;General Cargo;<1;<1;107,1;108,3;11,5;11,4;Dunkirk, United States;Aughinish Island, Ireland;IE;250005932;9818967;Under Way;150;146;19;2020;10;;;;5,2;1;0;0;0;0;suspect;suspect;il ne se dirige pas vers Dunkirk, USA mais plutôt vers la Manche;
+3;MANGATA;Sailing;<1;<1;174,4;174,8;4,7;4,5;Imerolia, Greece;;FR;228076060;;;7;8;3;;;;;;;0;0;0;0;0;neutre;neutre;;
+4;FEDERAL MINNESOTA;Bulk Carrier;<1;<1;98,1;97,8;13,3;13,5;Ghent, Belgium;Cardinal, Canada;MH;538011097;9975428;Under Way;200;182;24;2024;21;;;;7,3;1;0;0;0;0;neutre;suspect;les données AIS et captées sont cohérentes entre elles et avec les images;le nom du navire ne correspond pas
+5;FIRMAMENT ACE;Vehicles Carrier;<1;<1;123,1;123,9;20,1;19,5;Zeebrugge, Belgium;Portbury, United Kingdom;JP;431585000;9293894;Under Way;200;198;32;2006;60,1;;;;9;0;0;0;0;0;neutre;neutre;;
+6;WARSHIP F82;Military Ops;<1;<1;236,7;236,8;4,1;4,7;;;ES;224906000;;Under Way;120;118;32;;;;;;7,5;0;0;0;1;0;neutre;neutre;;
+7;;;;;;271;;9,4;;;;;;;;116;;;;;;;;0;0;0;0;0;neutre;neutre;ce navire semble être un sous-marin britannique;
+8;LARDOS;Bulk Carrier;<1;<1;60,7;61,3;11;0,4;Portbury, United Kingdom;Jorf Lasfar, Morocco;MH;538009718;9550280;Under Way;169;173;27;2009;17;;;;10;0;0;0;1;0;suspect;suspect;le navire est proche d'un autre navire et l'écart est important entre la vitesse déclarée et la vitesse mesurée;
+9;ARKLOW ARCHER;General Cargo;<1;<1;342,1;343,5;10,3;11;Belfast, United Kingdom;Rouen, France;IE;250005981;9851969;Under Way;120;118;15;2020;5,1;;;;7,2;0;0;1;0;0;neutre;neutre;;
+10;HNLMS KAREL DOORMAN;Military Ops;>30;>5;310,1;322,3;18,1;17,3;;;NL;244173000;4601759;;190;198;30;;;;;;7,8;0;0;0;0;0;neutre;neutre;;
+11;SEAMAGIC;Crude Oil Tanker;<1;<1;235,1;235,3;11,9;12,5;US GULF FOR ORDERS;Antwerpen, Belgium;MT;256954000;9997969;Under Way;250;239;44;2025;62,7;;;;8,5;1;0;0;0;0;neutre;neutre;;
+12;SONGA FALCON;Chemical/Oil Products;<1;<1;31,2;30;10,7;11,5;Antwerpen, Belgium;Tarragona, Spain;PT;255915866;9396012;Under Way;169;172;26;2009;17,8;;;;8,1;1;0;0;0;0;neutre;neutre;;
+13;ZIGUIDI;Tug;<1;<1;242,3;237,1;7,6;7,4;Horta, Portugal;Rotterdam Waalhaven, Netherlands;VC;376214000;9890135;Under Way;24;23;12;2021;0,3;;;;6;1;0;0;0;0;neutre;neutre;;
+14;;;;;;239;;8,1;;;;;;;;15;;;;;;;;1;0;0;0;0;suspect;suspect;sa longueur mesurée indique qu'il devrait posséder un AIS. Il devrait pas être présent dans la route maritime avec cet angle;
+15;LILLO SWAN;Chemical/Oil Products;<1;<1;352,3;351,8;10,2;10,3;Rotterdam, Netherlands;Santander, Spain;MT;256838000;9390329;Under Way;99;95;13;2007;3,3;;;;5;0;1;0;0;0;neutre;neutre;;
+16;MILA;General Cargo;<1;<1;211,9;213,8;9,9;9,8;Pontevedra, Spain;Cuxhaven, Germany;AG;305836000;9501681;Under Way;129;127;16;2013;6,3;;;;5;1;0;0;0;0;neutre;neutre;;
+17;OLYMPIC TAURUS;Offshore Support;<1;<1;26,1;26,7;12,3;12,6;Stavanger, Norway;Sidi Kerir Oil Term., Egypt;NO;257959000;9628465;Under Way;94;93;20;2012;4,9;;;;5,4;1;0;0;0;0;neutre;neutre;;
+18;SIEM CICERO;Vehicles Carrier;>5;>2;238,3;251,5;17,4;19,1;Davisville, United States;Emden, Germany;LR;636017539;9762534;Under Way;200;211;32;2017;56,7;;;;7,3;0;0;0;0;0;suspect;neutre;l'écart entre la vitesse mesurée et la vitesse déclarée est important ainsi que l'écart entre la cap mesuré et le cap déclaré;
+19;LUN II;Sailing;<1;<1;203,1;202,8;5,4;5,5;;Brixham, United Kingdom;PM;361001400;;;25;26;5;;;;;;;0;0;0;0;0;neutre;neutre;;
+20;;;;;;145,8;;18,9;;;;;;;;8;;;;;;;;0;0;0;1;0;suspect;neutre;ce navire semble être de type Militaire et il est proche d'un autre navire;
+21;ANDRE MALRAUX;Research Vessel;<1;<1;250,9;251,8;6,4;6,5;La Pallice, France;Cherbourg, France;FR;228353900;9666302;Under Way;35;34;9;2012;0,3;;;;3,2;0;0;1;0;0;neutre;neutre;les données AIS et captées sont cohérentes entre elles et avec les images;
+22;USS John S. McCain;Military Ops;<1;<1;144,8;146,9;9,8;10,1;;Brest, France;US;368721000;1;Under Way;154;150;20;1994;;;;;10,6;0;0;0;1;0;neutre;neutre;;
+23;ALASKAN EXPLORER;Crude Oil Tanker;<1;<1;84,5;83,3;10,4;10,2;Brest, France;Brest, France;US;303294000;9244661;Under Way;287;285;50;2005;110,7;;;;8,3;0;0;0;0;0;neutre;neutre;;
+24;MARGARETA;Crude Oil Tanker;>5;<2;26,3;27;12,3;12;Skagen, Denmark;Dakar Anch., Senegal;LR;636022945;9233818;Under Way;236;234;42;2003;54,9;;;;8,5;1;0;0;0;0;suspect;neutre;la destination et la provenance sont les mêmes, ce qui est anormal pour un navire de type Tanker;
+25;CALYPSO II;Fishing;<1;<1;1,2;357,8;1,3;1,2;;Brest, France;FR;227589230;;Under Way;11;12;4;;;;;;;0;0;1;0;1;suspect;suspect;le navire possède une vitesse faible alors que ce dit Under Way, suspicion de pèche illégal dans une zone protégée;
+26;PLANET MIGO;Sailing;<1;<1;23,5;24,3;8,4;8,5;Saint Peter Port, United Kingdom;Roscoff, France;FR;227068140;;;14;13;7;;;;;;;0;0;1;0;0;neutre;neutre;;
+27;F/V KERVOUROC II;Fishing;<1;<1;310,9;310,8;8;9,2;Brest, France;Les Sables-d'Olonne, France;FR;227418000;;Under Way;17;16;8;;;;;;;0;0;1;0;1;neutre;neutre;;
+28;ASUKA2;Passenger Ship;<1;<1;242,3;241,2;12,3;12,9;Bilbao, Spain;Rouen, France;JP;432545000;8806204;Under Way;241;240;30;1990;50,4;;;;8;1;0;0;0;0;neutre;neutre;;
+29;ROSTRUM SAO PAULO;Bulk Carrier;<1;<1;210,1;209,2;13,9;13,4;Las Palmas, Spain;Ust-Luga Anch., Russia;LR;636023625;9997270;Under Way;183;180;32;2025;25,9;;;;8,9;1;0;0;0;0;neutre;suspect;les données AIS et captées sont cohérentes entre elles et avec les images;le nom sur l'image est différent de celui fourni dans l'AIS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
