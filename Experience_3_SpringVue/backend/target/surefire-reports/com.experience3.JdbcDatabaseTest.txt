@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.experience3.JdbcDatabaseTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.777 s -- in com.experience3.JdbcDatabaseTest

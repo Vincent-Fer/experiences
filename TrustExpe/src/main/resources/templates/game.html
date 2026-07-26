@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <title>Game</title>
+    <link rel="stylesheet" href="/static/style/game.css">
+    <link rel="icon" href="favicon" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div id="case">
+            <table id="tab_data">
+                <tr id="tr_th">
+                    <th class="th_vesData" id="th_sus">
+                        Liste suspects
+                    </th>
+                    <th class="th_vesData" id="th_ais">
+                        Données AIS
+                    </th>
+                    <th class="th_vesData" id="th_sens">
+                        Données capteurs
+                    </th>
+                </tr>
+                <tr id="tr_vesData">
+                    <td class="vesData" id="tdSus">
+                        <p id="sus0"></p>
+                        <p id="sus1"></p>
+                        <p id="sus2"></p>
+                        <p id="sus3"></p>
+                        <p id="sus4"></p>
+                        <p id="sus5"></p>
+                        <p id="sus6"></p>
+                        <p id="sus7"></p>
+                        <p id="sus8"></p>
+                        <p id="sus9"></p>
+                        <p id="sus10"></p>
+                        <p id="sus11"></p>
+                        <p id="sus12"></p>
+                        <p id="sus13"></p>
+                        <p id="sus14"></p>
+                    </td>
+                    <td class="vesData" id="tdAis">
+                        <p><strong>Vitesse</strong> : <span id="vspeedAIS"></span></p>
+                        <p><strong>Cap</strong> : <span id="vheadAIS"></span></p>
+                        <p><strong>Longueur</strong> : <span id="vlengthAIS"></span></p>
+                        <p><strong>Largeur</strong> : <span id="vwidth"></span></p>
+                        <p><strong>MAJ</strong> : <span id="vLastAIS"></span></p>
+                        <p><strong>Type</strong> : <span id="vtype"></span></p>
+                        <p><strong>Nom</strong> : <span id="vname"></span></p>
+                        <p><strong>Nat</strong> : <span id="vnat"></span></p>
+                        <p><strong>MMSI</strong> : <span id="vmmsi"></span></p>
+                        <p><strong>IMO</strong> : <span id="vimo"></span></p>
+                        <p><strong>De</strong> : <span id="vfrom"></span></p>
+                        <p><strong>A</strong> : <span id="vto"></span></p>
+                        <p><strong>Statut</strong> : <span id="vstatus"></span></p>
+                        <p><strong>Année</strong> : <span id="vbuilt"></span></p>
+                        <p><strong>Poids</strong> : <span id="vweight"></span></p>
+                        <p><strong>Tirant</strong> : <span id="vdraught"></span></p>
+                    </td>
+                    <td class="vesData" id="tdSensor">
+                        <p><strong>Vitesse</strong> : <span id="vspeedReal"></span></p>
+                        <p><strong>Cap</strong> : <span id="vheadReal"></span></p>
+                        <p><strong>Longueur</strong> : <span id="vlengthReal"></span></p>
+                        <p><strong>Dist. AIS</strong> : <span id="vDistAIS"></span></p>
+                        <p><strong>Route maritime</strong> : <span id="inMaritimeRoad"></span></p>
+                        <p><strong>Zone de pèche</strong> : <span id="inFishingZone"></span></p>
+                        <p><strong>Zone côtière</strong> : <span id="inCoastZone"></span></p>
+                        <p><strong>Navire proche</strong> : <span id="nearOtherVessel"></span></p>
+                        <p><strong>Zone protégée</strong> : <span id="protectedZone"></span></p>
+                    </td>
+                </tr>
+                <tr id="tr_ves">
+                    <td colspan="3" id="td_ves">
+                        <img id="imgVes" src="/static/images/vessel.png"/>
+                        <div class="loupe" id="loupe"></div>
+                    </td>
+                </tr>
+            </table>
+            <table id="tab_tac">
+                <tr id="tr_tac">
+                    <td id="td_img_tac">
+                        <img id="imgTac" src="/static/images/tactical.png"/>
+                    </td>
+                </tr>
+                <tr id="tr_dec">
+                    <td class="td_dec" id="tdDecIni">
+                        <span class="td_span" id="targetIs">Ce navire est</span>
+                        <div class="btn_group">
+                                <button class="but_sus" id="butIniSus">Suspect</button>
+                                <button class="but_neu" id="butIniNeu">Neutre</button>
+                        </div>
+                    </td>
+                    <td class="td_dec" id="tdRec">
+                        <span class="td_span" id="recIs">Recommandation IA</span>
+                        <div class="btn_group">
+                            <form id="formRecIA" method="POST" action="/click">
+                                <div class="but_sus" id="recSus">Suspect</div>
+                                <div class="but_neu" id="recNeu">Neutre</div>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="td_dec" id="tdDecFin">
+                        <span class="td_span" id="finTargetIs">Finalement, ce navire est :</span>
+                        <div class="btn_group">
+                            <form id="formFin" method="POST" action="/click">
+                                <input type="hidden" name="typeDec" value="fin"/>
+                                <input type="hidden" name="objectName" id="inputFin" value=""/>
+                                <button class="but_sus" type="submit" id="butFinSus">Suspect</button>
+                                <button class="but_neu" type="submit" id="butFinNeu">Neutre</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="tr_cd">
+                    <td id="td_countdown">
+                        <span class="normal" id="countdownElement"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script src="/static/script/game.js" defer></script>
+</body>
+</html>

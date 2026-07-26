@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <title>Choices</title>
+    <link rel="stylesheet" href="/static/style/choice.css">
+    <link rel="icon" href="favicon" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Page des choix</h1>
+        <div id="divSesExp">
+            <div class="divIn" id="divSes">
+                <p>Commencer une nouvelle session</p>
+                <form id="myForm" method="POST" action="/newSes">
+                    <button type="submit" id="newSes">C'est parti !</button>
+                </form>
+                <span id="messageSes" style="color: red; margin-top: 10px; display: none;"></span>
+                <span id="messageTps" style="color: red; margin-top: 10px; display: none;"></span>
+            </div>
+            <div class="divIn" id="divExp">
+                <p>Voir les explications</p>
+                <form id="myForm2" method="POST" action="/explainations">
+                    <button type="submit" id="taskExplainations">Explications</button>
+                </form>
+            </div>
+        </div>
+        <p>Vérifier votre historique de feedback</p>
+        <div id="div_feedback"></div>
+        <button id="tutorialToggle" class="tutorial-btn">Démarrer le tutoriel</button>
+        <div id="tutorialTooltip" style="display: none;">
+            <div id="tutorialContent"></div>
+            <div id="tutorialControls">
+                <button class="tutorial-control-btn" id="prevStep">←</button>
+                <span id="stepCounter" class="step-counter"></span>
+                <button class="tutorial-control-btn" id="nextStep">→</button>
+                <button class="tutorial-control-btn" id="closeTutorial">✕</button>
+            </div>
+        </div>
+    </main>
+    <script src="/static/script/choice.js" defer></script>
+</body>
+</html>

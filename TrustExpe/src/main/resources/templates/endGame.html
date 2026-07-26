@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <title>Fin de session</title>
+    <link rel="stylesheet" href="/static/style/endGame.css">
+    <link rel="icon" href="favicon" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Fin de session</h1>
+        <div id="divFin"></div>
+        <div id="message" style="color: red; margin-top: 10px; display: none;"></div>
+        <form id="myForm" method="POST" action="/choice">
+            <button class="previous" type="submit" id="previousPage">Revenir à la page choix</button>
+        </form>
+    </main>
+    <script src="/static/script/endGame.js" defer></script>
+</body>
+</html>

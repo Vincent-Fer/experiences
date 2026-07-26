@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <title>Questions sur la confiance</title>
+    <link rel="stylesheet" href="/static/style/slider.css">
+    <link rel="icon" href="favicon" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="rating-container">
+            <h1>Questions sur la confiance</h1>
+            <div class="explanations-textQuest">
+                <p>
+                    Merci de compléter ces deux questions concernant votre confiance en vous et la confiance en l'IA.
+                </p>
+                <p>
+                    Pour chacune de ces questions, votre note doit aller de
+                    1 (vous n'êtes pas du tout d'accord avec la proposition)
+                    à 7 (vous êtes extrêmement en accord avec la proposition).
+                </p>
+            </div>
+            <form id="sliderForm" method="POST" action="/sendSlider">
+                <h2>Quel niveau de confiance en vous avez-vous pour réaliser la tâche seul ?</h2>
+                <div class="rating-row">
+                    <div class="rating-scale">
+                        <button type="button" class="rating-button question1" data-value="1">1</button>
+                        <button type="button" class="rating-button question1" data-value="2">2</button>
+                        <button type="button" class="rating-button question1" data-value="3">3</button>
+                        <button type="button" class="rating-button question1" data-value="4">4</button>
+                        <button type="button" class="rating-button question1" data-value="5">5</button>
+                        <button type="button" class="rating-button question1" data-value="6">6</button>
+                        <button type="button" class="rating-button question1" data-value="7">7</button>
+                    </div>
+                    <input type="hidden" name="question1" id="hidden-question1">
+                    <div class="rating-labels">
+                        <span class="left-label">Pas du tout</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="right-label">Extrêmement</span>
+                    </div>
+                </div>
+                <h2>Quel niveau de confiance en l'intelligence artificielle avez-vous pour vous aider à réaliser la tâche ?</h2>
+                <div class="rating-row">
+                    <div class="rating-scale">
+                        <button type="button" class="rating-button question2" data-value="1">1</button>
+                        <button type="button" class="rating-button question2" data-value="2">2</button>
+                        <button type="button" class="rating-button question2" data-value="3">3</button>
+                        <button type="button" class="rating-button question2" data-value="4">4</button>
+                        <button type="button" class="rating-button question2" data-value="5">5</button>
+                        <button type="button" class="rating-button question2" data-value="6">6</button>
+                        <button type="button" class="rating-button question2" data-value="7">7</button>
+                    </div>
+                    <input type="hidden" name="question2" id="hidden-question2">
+                    <div class="rating-labels">
+                        <span class="left-label">Pas du tout</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="right-label">Extrêmement</span>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" id="end" style="display:none">Passer au questionnaire</button>
+                <button type="submit" class="submit-btn" id="mid" style="display:none">Continuer</button>
+                <button type="submit" class="submit-btn" id="begin" style="display:none">Voir les suspects</button>
+            </form>
+        </div>
+        <script>
+            // This would be handled by the controller or JavaScript
+            document.addEventListener('DOMContentLoaded', function() {
+                // Show the appropriate button based on some logic
+                // This is a simplified version - actual logic would depend on your application
+                const beginButton = document.getElementById('begin');
+                beginButton.style.display = "block";
+            });
+        </script>
+        <script>
+            // Initialize rating buttons
+            document.addEventListener('DOMContentLoaded', function() {
+                const ratingButtons = document.querySelectorAll('.rating-button');
+
+                ratingButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const questionNumber = this.classList[2].replace('question', '');
+                        const questionButtons = document.querySelectorAll('.question' + questionNumber);
+                        const hiddenInput = document.getElementById('hidden-question' + questionNumber);
+
+                        questionButtons.forEach(btn => btn.classList.remove('selected'));
+                        this.classList.add('selected');
+                        hiddenInput.value = this.getAttribute('data-value');
+                    });
+                });
+            });
+        </script>
+        <script src="/static/script/slider.js" defer></script>
+    </main>
+</body>
+</html>
